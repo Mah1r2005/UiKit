@@ -1,0 +1,3982 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Title</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.21/dist/css/uikit.min.css" />
+
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.6.21/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.6.21/dist/js/uikit-icons.min.js"></script>
+
+
+    </head>
+    <body>
+<!------notification----->
+<button class="demo uk-button uk-button-default" type="button" onclick="UIkit.notification({message: 'Notification message'})">Click me</button>
+
+<button class="uk-button uk-button-default demo" type="button" onclick="UIkit.notification({message: '<span uk-icon=\'icon: check\'></span> Message with an icon'})">With icon</button>
+
+
+<p uk-margin>
+    <button class="uk-button uk-button-default" type="button" onclick="UIkit.notification({message: 'Top Left...', pos: 'top-left'})">Top Left</button>
+    <button class="uk-button uk-button-default" type="button" onclick="UIkit.notification({message: 'Top Center...', pos: 'top-center'})">Top Center</button>
+    <button class="uk-button uk-button-default" type="button" onclick="UIkit.notification({message: 'Top Right...', pos: 'top-right'})">Top Right</button>
+    <button class="uk-button uk-button-default" type="button" onclick="UIkit.notification({message: 'Bottom Left...', pos: 'bottom-left'})">Bottom Left</button>
+    <button class="uk-button uk-button-default" type="button" onclick="UIkit.notification({message: 'Bottom Center...', pos: 'bottom-center'})">Bottom Center</button>
+    <button class="uk-button uk-button-default" type="button" onclick="UIkit.notification({message: 'Bottom Right...', pos: 'bottom-right'})">Bottom Right</button>
+</p>
+
+<p uk-margin>
+    <button class="uk-button uk-button-default demo" type="button" onclick="UIkit.notification({message: 'Primary message...', status: 'primary'})">Primary</button>
+    <button class="uk-button uk-button-default demo" type="button" onclick="UIkit.notification({message: 'Success message...', status: 'success'})">Success</button>
+    <button class="uk-button uk-button-default demo" type="button" onclick="UIkit.notification({message: 'Warning message...', status: 'warning'})">Warning</button>
+    <button class="uk-button uk-button-default demo" type="button" onclick="UIkit.notification({message: 'Danger message...', status: 'danger'})">Danger</button>
+</p>
+
+<button class="uk-button uk-button-default close" onclick="UIkit.notification.closeAll()">Close All</button>
+
+<!-------off canvas----->
+<br>
+<button class="uk-button uk-button-default uk-margin-small-right" type="button" uk-toggle="target: #offcanvas-usage">Open</button>
+
+<a href="#offcanvas-usage" uk-toggle>Open</a>
+
+<div id="offcanvas-usage" uk-offcanvas>
+    <div class="uk-offcanvas-bar">
+
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+        <h3>Title</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    </div>
+</div>
+
+<button class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-overlay">Open</button>
+
+<div id="offcanvas-overlay" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar">
+
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+
+        <h3>Title</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    </div>
+</div>
+
+<button class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-flip">Open</button>
+
+<div id="offcanvas-flip" uk-offcanvas="flip: true; overlay: true">
+    <div class="uk-offcanvas-bar">
+
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+        <h3>Title</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    </div>
+</div>
+
+<button class="uk-button uk-button-default uk-margin-small-right" type="button" uk-toggle="target: #offcanvas-slide">Slide</button>
+
+<button class="uk-button uk-button-default uk-margin-small-right" type="button" uk-toggle="target: #offcanvas-push">Push</button>
+
+<button class="uk-button uk-button-default uk-margin-small-right" type="button" uk-toggle="target: #offcanvas-reveal">Reveal</button>
+
+<button class="uk-button uk-button-default uk-margin-small-right" type="button" uk-toggle="target: #offcanvas-none">None</button>
+
+<div id="offcanvas-slide" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar">
+
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+        <h3>Title</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    </div>
+</div>
+
+<div id="offcanvas-push" uk-offcanvas="mode: push; overlay: true">
+    <div class="uk-offcanvas-bar">
+
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+        <h3>Title</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    </div>
+</div>
+
+<div id="offcanvas-reveal" uk-offcanvas="mode: reveal; overlay: true">
+    <div class="uk-offcanvas-bar">
+
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+        <h3>Title</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    </div>
+</div>
+
+<div id="offcanvas-none" uk-offcanvas="mode: none; overlay: true">
+    <div class="uk-offcanvas-bar">
+
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+        <h3>Title</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    </div>
+</div>
+
+<button class="uk-button uk-button-default uk-margin-small-right" type="button" uk-toggle="target: #offcanvas-nav-primary">Primary Nav</button>
+
+<button class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-nav">Default Nav</button>
+
+<div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            <li class="uk-active"><a href="#">Active</a></li>
+            <li class="uk-parent">
+                <a href="#">Parent</a>
+                <ul class="uk-nav-sub">
+                    <li><a href="#">Sub item</a></li>
+                    <li><a href="#">Sub item</a></li>
+                </ul>
+            </li>
+            <li class="uk-nav-header">Header</li>
+            <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: table"></span> Item</a></li>
+            <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: thumbnails"></span> Item</a></li>
+            <li class="uk-nav-divider"></li>
+            <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: trash"></span> Item</a></li>
+        </ul>
+
+    </div>
+</div>
+
+<div id="offcanvas-nav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar">
+
+        <ul class="uk-nav uk-nav-default">
+            <li class="uk-active"><a href="#">Active</a></li>
+            <li class="uk-parent">
+                <a href="#">Parent</a>
+                <ul class="uk-nav-sub">
+                    <li><a href="#">Sub item</a></li>
+                    <li><a href="#">Sub item</a></li>
+                </ul>
+            </li>
+            <li class="uk-nav-header">Header</li>
+            <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: table"></span> Item</a></li>
+            <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: thumbnails"></span> Item</a></li>
+            <li class="uk-nav-divider"></li>
+            <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: trash"></span> Item</a></li>
+        </ul>
+
+    </div>
+</div>
+
+<!-------overlay---->
+<div class="uk-inline">
+    <img src="images/photo.jpg" alt="">
+    <div class="uk-overlay uk-light uk-position-bottom">
+        <p>Default Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+</div>
+
+<div class="uk-child-width-1-2@m" uk-grid>
+    <div>
+
+        <div class="uk-inline">
+            <img src="images/photo.jpg" alt="">
+            <div class="uk-overlay uk-overlay-default uk-position-bottom">
+                <p>Default Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+
+    </div>
+    <div>
+
+        <div class="uk-inline">
+            <img src="images/photo.jpg" alt="">
+            <div class="uk-overlay-default uk-position-cover"></div>
+            <div class="uk-overlay uk-position-bottom uk-dark">
+                <p>Default Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="uk-child-width-1-2@m" uk-grid>
+    <div>
+
+        <div class="uk-inline">
+            <img src="https://getuikit.com/docs/images/photo.jpg" alt="">
+            <div class="uk-overlay uk-overlay-primary uk-position-bottom">
+                <p>Default Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+
+    </div>
+    <div>
+
+        <div class="uk-inline">
+            <img src="https://getuikit.com/docs/images/photo.jpg" alt="">
+            <div class="uk-overlay-primary uk-position-cover"></div>
+            <div class="uk-overlay uk-position-bottom uk-light">
+                <p>Default Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="uk-child-width-1-2@m" uk-grid>
+    <div>
+
+        <div class="uk-inline uk-light">
+            <img src="https://getuikit.com/docs/images/dark.jpg" alt="">
+            <div class="uk-position-center">
+                <span uk-overlay-icon></span>
+            </div>
+        </div>
+
+    </div>
+    <div>
+
+        <div class="uk-inline uk-dark">
+            <img src="https://getuikit.com/docs/images/photo.jpg" alt="">
+            <div class="uk-overlay-default uk-position-cover">
+                <div class="uk-position-center">
+                    <span uk-overlay-icon></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="uk-child-width-1-2@m" uk-grid>
+    <div>
+        <div class="uk-inline">
+            <img src="https://getuikit.com/docs/images/photo.jpg" alt="">
+            <div class="uk-overlay uk-overlay-default uk-position-top">
+                <p>Top</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="uk-inline">
+            <img src="images/photo.jpg" alt="">
+            <div class="uk-overlay uk-overlay-default uk-position-center">
+                <p>Center</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="uk-child-width-1-2@m" uk-grid>
+    <div>
+        <div class="uk-inline">
+            <img src="https://getuikit.com/docs/images/photo.jpg" alt="">
+            <div class="uk-overlay uk-overlay-default uk-position-top">
+                <p>Top</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="uk-inline">
+            <img src="https://getuikit.com/docs/images/photo.jpg" alt="">
+            <div class="uk-overlay uk-overlay-default uk-position-center">
+                <p>Center</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!------padiding----->
+<div class="uk-padding uk-background-muted uk-width-1-2@s">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</div>
+
+<!------pagination---->
+<ul class="uk-pagination uk-flex-center" uk-margin>
+    <li><a href="#"><span uk-pagination-previous></span></a></li>
+    <li><a href="#">1</a></li>
+    <li class="uk-disabled"><span>...</span></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">6</a></li>
+    <li class="uk-active"><span>7</span></li>
+    <li><a href="#">8</a></li>
+    <li><a href="#"><span uk-pagination-next></span></a></li>
+</ul>
+
+<ul class="uk-pagination uk-flex-right uk-margin-medium-top" uk-margin>
+    <li><a href="#"><span uk-pagination-previous></span></a></li>
+    <li><a href="#">1</a></li>
+    <li class="uk-disabled"><span>...</span></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">6</a></li>
+    <li class="uk-active"><span>7</span></li>
+    <li><a href="#">8</a></li>
+    <li><a href="#"><span uk-pagination-next></span></a></li>
+</ul>
+
+<ul class="uk-pagination">
+    <li><a href="#"><span class="uk-margin-small-right" uk-pagination-previous></span> Previous</a></li>
+    <li class="uk-margin-auto-left"><a href="#">Next <span class="uk-margin-small-left" uk-pagination-next></span></a></li>
+</ul>
+
+<!-----parallax------>
+<div class="uk-height-large uk-background-cover uk-light uk-flex" uk-parallax="bgy: -200" style="background-image: url('images/dark.jpg');">
+
+    <h1 class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">Headline</h1>
+
+</div>
+
+<div class="uk-height-large uk-background-cover uk-overflow-hidden uk-light uk-flex uk-flex-top" style="background-image: url('images/dark.jpg');">
+    <div class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
+        <h1 uk-parallax="opacity: 0,1; y: -100,0; scale: 2,1; viewport: 0.5;">Headline</h1>
+        <p uk-parallax="opacity: 0,1; y: 100,0; scale: 0.5,1; viewport: 0.5;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+</div>
+
+<div class="uk-height-large uk-background-cover uk-overflow-hidden uk-light uk-flex uk-flex-top" style="background-image: url('images/dark.jpg');">
+    <div class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
+        <h1 uk-parallax="opacity: 0,1,1; y: -100,0,0; x: 100,100,0; scale: 2,1,1; viewport: 0.5;">Headline</h1>
+        <p uk-parallax="opacity: 0,1,1; y: 100,0,0; x: -100,-100,0; scale: 0.5,1,1; viewport: 0.5;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+</div>
+
+<div class="uk-height-large uk-background-cover uk-light uk-flex uk-flex-top" style="background-image: url('images/dark.jpg');">
+
+    <h1 class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical" uk-parallax="opacity: 0,1; y: 100,0; viewport: 0.5">Headline</h1>
+
+</div>
+
+<div class="uk-height-large uk-background-cover uk-light uk-flex uk-flex-top" uk-parallax="bgy: -200" style="background-image: url('images/dark.jpg');">
+
+    <h1 class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical" uk-parallax="y: 100,0">Headline</h1>
+
+</div>
+
+<div id="test-target" class="uk-height-large uk-background-cover uk-light uk-flex uk-flex-top" uk-parallax="bgy: -200" style="background-image: url('images/dark.jpg');">
+
+    <h1 class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical" uk-parallax="target: #test-target; y: 100,0">Headline</h1>
+
+</div>
+
+<div id="test-easing" class="uk-height-large uk-background-cover uk-overflow-hidden uk-light uk-flex" style="background-image: url('images/dark.jpg');">
+     <div class="uk-grid uk-margin-auto uk-margin-auto-vertical uk-flex-inline">
+        <div><div class="uk-card uk-card-default uk-padding-small" uk-parallax="y: 200; easing: -2">-2</div></div>
+        <div><div class="uk-card uk-card-default uk-padding-small" uk-parallax="y: 200; easing: -1">-1</div></div>
+        <div><div class="uk-card uk-card-default uk-padding-small" uk-parallax="y: 200; easing: -0.5">-0.5</div></div>
+        <div><div class="uk-card uk-card-default uk-padding-small" uk-parallax="y: 200; easing: 0">0</div></div>
+        <div><div class="uk-card uk-card-default uk-padding-small" uk-parallax="y: 200; easing: 0.5">0.5</div></div>
+        <div><div class="uk-card uk-card-default uk-padding-small" uk-parallax="y: 200; easing: 1">1</div></div>
+        <div><div class="uk-card uk-card-default uk-padding-small" uk-parallax="y: 200; easing: 2">2</div></div>
+    </div>
+</div>
+
+<div id="test-color" class="test-color uk-height-large uk-overflow-hidden uk-flex uk-flex-top" uk-parallax="background-color: yellow,white; border-color: #00f,#f00; viewport: 0.5" style="border: 10px solid #000;">
+
+    <h1 class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical" uk-parallax="target: #test-target; color: #0f0; viewport: 0.5">Headline</h1>
+
+</div>
+
+<div id="test-filter" class="uk-height-large uk-background-cover uk-overflow-hidden uk-flex uk-flex-top" uk-parallax="sepia: 100;" style="background-image: url('images/light.jpg');">
+
+    <h1 class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical" uk-parallax="target: #test-filter; blur: 0,10;">Headline</h1>
+
+</div>
+
+<div class="uk-text-center" uk-parallax="stroke: 100%; viewport: 0.7">
+    <img src="https://getuikit.com/docs/images/strokes.svg" alt="" uk-svg>
+</div>
+
+<!-----placeholder---->
+<div class="uk-placeholder uk-text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+
+<div class="https://getuikit.com/docs/uk-inline uk-margin">
+
+    <img src="images/photo.jpg" alt="">
+
+    <div class="uk-position-top uk-overlay uk-overlay-default uk-text-center">Top</div>
+    <div class="uk-position-bottom uk-overlay uk-overlay-default uk-text-center">Bottom</div>
+    <div class="uk-position-left uk-overlay uk-overlay-default uk-flex uk-flex-middle">Left</div>
+    <div class="uk-position-right uk-overlay uk-overlay-default uk-flex uk-flex-middle">Right</div>
+
+</div>
+<!------position----->
+<div class="uk-inline">
+
+    <img src="https://getuikit.com/docs/images/photo.jpg" alt="">
+
+    <div class="uk-position-top-left uk-overlay uk-overlay-default">Top Left</div>
+    <div class="uk-position-top-center uk-overlay uk-overlay-default">Top Center</div>
+    <div class="uk-position-top-right uk-overlay uk-overlay-default">Top Right</div>
+    <div class="uk-position-center-left uk-overlay uk-overlay-default">Center Left</div>
+    <div class="uk-position-center uk-overlay uk-overlay-default">Center</div>
+    <div class="uk-position-center-right uk-overlay uk-overlay-default">Center Right</div>
+    <div class="uk-position-bottom-left uk-overlay uk-overlay-default">Bottom Left</div>
+    <div class="uk-position-bottom-center uk-overlay uk-overlay-default">Bottom Center</div>
+    <div class="uk-position-bottom-right uk-overlay uk-overlay-default">Bottom Right</div>
+
+</div>
+
+<div class="uk-inline">
+
+    <img src="https://getuikit.com/docs/images/photo.jpg" alt="">
+
+    <div class="uk-position-cover uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle">Cover</div>
+
+</div>
+
+<div class="uk-inline">
+
+    <img src="https://getuikit.com/docs/images/photo.jpg" alt="">
+
+    <div class="uk-position-center-left-out uk-overlay uk-overlay-primary uk-visible@s">Out</div>
+    <div class="uk-position-center-right-out uk-overlay uk-overlay-primary uk-visible@s">Out</div>
+
+</div>
+
+<div class="uk-inline uk-margin">
+
+    <img src="https://getuikit.com/docs/images/photo.jpg" alt="">
+
+    <div class="uk-position-small uk-position-top-left uk-overlay uk-overlay-default">Top Left</div>
+    <div class="uk-position-small uk-position-top-center uk-overlay uk-overlay-default">Top Center</div>
+    <div class="uk-position-small uk-position-top-right uk-overlay uk-overlay-default">Top Right</div>
+    <div class="uk-position-small uk-position-center-left uk-overlay uk-overlay-default">Center Left</div>
+    <div class="uk-position-small uk-position-center uk-overlay uk-overlay-default">Center</div>
+    <div class="uk-position-small uk-position-center-right uk-overlay uk-overlay-default">Center Right</div>
+    <div class="uk-position-small uk-position-bottom-left uk-overlay uk-overlay-default">Bottom Left</div>
+    <div class="uk-position-small uk-position-bottom-center uk-overlay uk-overlay-default">Bottom Center</div>
+    <div class="uk-position-small uk-position-bottom-right uk-overlay uk-overlay-default">Bottom Right</div>
+
+</div>
+
+<div class="uk-inline uk-margin">
+
+    <img src="https://getuikit.com/docs/images/photo.jpg" alt="">
+
+    <div class="uk-position-small uk-position-top uk-overlay uk-overlay-default uk-text-center">Top</div>
+    <div class="uk-position-small uk-position-bottom uk-overlay uk-overlay-default uk-text-center">Bottom</div>
+    <div class="uk-position-small uk-position-left uk-overlay uk-overlay-default uk-flex uk-flex-middle">Left</div>
+    <div class="uk-position-small uk-position-right uk-overlay uk-overlay-default uk-flex uk-flex-middle">Right</div>
+
+</div>
+
+<div class="uk-inline uk-margin">
+
+    <img src="https://getuikit.com/docs/images/photo.jpg" alt="">
+
+    <div class="uk-position-small uk-position-cover uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle">Cover</div>
+
+</div>
+
+<div class="uk-margin uk-text-center">
+    <div class="uk-inline-block uk-width-large">
+
+        <img src="https://getuikit.com/docs/images/photo.jpg" alt="">
+
+        <div class="uk-position-small uk-position-center-left-out uk-overlay uk-overlay-primary uk-visible@s">Out</div>
+        <div class="uk-position-small uk-position-center-right-out uk-overlay uk-overlay-primary uk-visible@s">Out</div>
+
+    </div>
+</div>
+
+<div class="uk-inline uk-margin">
+
+    <img src="https://getuikit.com/docs/images/photo.jpg" alt="">
+
+    <div class="uk-position-medium uk-position-top-left uk-overlay uk-overlay-default">Top Left</div>
+    <div class="uk-position-medium uk-position-top-center uk-overlay uk-overlay-default">Top Center</div>
+    <div class="uk-position-medium uk-position-top-right uk-overlay uk-overlay-default">Top Right</div>
+    <div class="uk-position-medium uk-position-center-left uk-overlay uk-overlay-default">Center Left</div>
+    <div class="uk-position-medium uk-position-center uk-overlay uk-overlay-default">Center</div>
+    <div class="uk-position-medium uk-position-center-right uk-overlay uk-overlay-default">Center Right</div>
+    <div class="uk-position-medium uk-position-bottom-left uk-overlay uk-overlay-default">Bottom Left</div>
+    <div class="uk-position-medium uk-position-bottom-center uk-overlay uk-overlay-default">Bottom Center</div>
+    <div class="uk-position-medium uk-position-bottom-right uk-overlay uk-overlay-default">Bottom Right</div>
+
+</div>
+
+<div class="uk-inline uk-margin">
+
+    <img src="https://getuikit.com/docs/images/photo.jpg" alt="">
+
+    <div class="uk-position-medium uk-position-top uk-overlay uk-overlay-default uk-text-center">Top</div>
+    <div class="uk-position-medium uk-position-bottom uk-overlay uk-overlay-default uk-text-center">Bottom</div>
+    <div class="uk-position-medium uk-position-left uk-overlay uk-overlay-default uk-flex uk-flex-middle">Left</div>
+    <div class="uk-position-medium uk-position-right uk-overlay uk-overlay-default uk-flex uk-flex-middle">Right</div>
+
+</div>
+
+<div class="uk-inline uk-margin">
+
+    <img src="https://getuikit.com/docs/images/photo.jpg" alt="">
+
+    <div class="uk-position-medium uk-position-cover uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle">Cover</div>
+
+</div>
+
+<div class="uk-margin uk-text-center">
+    <div class="uk-inline-block uk-width-large">
+
+        <img src="https://getuikit.com/docs/images/photo.jpg" alt="">
+
+        <div class="uk-position-medium uk-position-center-left-out uk-overlay uk-overlay-primary uk-visible@s">Out</div>
+        <div class="uk-position-medium uk-position-center-right-out uk-overlay uk-overlay-primary uk-visible@s">Out</div>
+
+    </div>
+</div>
+
+<div class="uk-inline uk-margin">
+
+    <img src="https://getuikit.com/docs/images/photo.jpg" alt="">
+
+    <div class="uk-position-large uk-position-top-left uk-overlay uk-overlay-default">Top Left</div>
+    <div class="uk-position-large uk-position-top-center uk-overlay uk-overlay-default">Top Center</div>
+    <div class="uk-position-large uk-position-top-right uk-overlay uk-overlay-default">Top Right</div>
+    <div class="uk-position-large uk-position-center-left uk-overlay uk-overlay-default">Center Left</div>
+    <div class="uk-position-large uk-position-center uk-overlay uk-overlay-default">Center</div>
+    <div class="uk-position-large uk-position-center-right uk-overlay uk-overlay-default">Center Right</div>
+    <div class="uk-position-large uk-position-bottom-left uk-overlay uk-overlay-default">Bottom Left</div>
+    <div class="uk-position-large uk-position-bottom-center uk-overlay uk-overlay-default">Bottom Center</div>
+    <div class="uk-position-large uk-position-bottom-right uk-overlay uk-overlay-default">Bottom Right</div>
+
+</div>
+
+<div class="uk-inline uk-margin">
+
+    <img src="https://getuikit.com/docs/images/photo.jpg" alt="">
+
+    <div class="uk-position-large uk-position-top uk-overlay uk-overlay-default uk-text-center">Top</div>
+    <div class="uk-position-large uk-position-bottom uk-overlay uk-overlay-default uk-text-center">Bottom</div>
+    <div class="uk-position-large uk-position-left uk-overlay uk-overlay-default uk-flex uk-flex-middle">Left</div>
+    <div class="uk-position-large uk-position-right uk-overlay uk-overlay-default uk-flex uk-flex-middle">Right</div>
+
+</div>
+
+<div class="uk-inline uk-margin">
+
+    <img src="https://getuikit.com/docs/images/photo.jpg" alt="">
+
+    <div class="uk-position-large uk-position-cover uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle">Cover</div>
+
+</div>
+
+<div class="uk-margin uk-text-center">
+    <div class="uk-inline-block uk-width-large">
+
+        <img src="https://getuikit.com/docs/images/photo.jpg" alt="">
+
+        <div class="uk-position-large uk-position-center-left-out uk-overlay uk-overlay-primary uk-visible@s">Out</div>
+        <div class="uk-position-large uk-position-center-right-out uk-overlay uk-overlay-primary uk-visible@s">Out</div>
+
+    </div>
+</div>
+
+<!-------progress----->
+<progress id="js-progressbar" class="uk-progress" value="10" max="100"></progress>
+
+<script>
+
+    UIkit.util.ready(function () {
+
+        var bar = document.getElementById('js-progressbar');
+
+        var animate = setInterval(function () {
+
+            bar.value += 10;
+
+            if (bar.value >= bar.max) {
+                clearInterval(animate);
+            }
+
+        }, 1000);
+
+    });
+
+</script>
+
+<!-----scroll----->
+<a class="uk-button uk-button-primary" href="#target" uk-scroll>Scroll down</a>
+<a id="js-scroll-trigger" class="uk-button uk-button-primary" href="#target" uk-scroll>Down with callback</a>
+
+<script>
+    UIkit.util.on('#js-scroll-trigger', 'scrolled', function () {
+        alert('Done.');
+    });
+</script>
+
+<!------scrollspy------>
+<div class="uk-child-width-1-2@m uk-grid-match" uk-grid>
+    <div>
+        <div class="uk-card uk-card-default uk-card-body" uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
+            <h3 class="uk-card-title">Left</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-default uk-card-body" uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
+            <h3 class="uk-card-title">Right</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+</div>
+
+<div class="uk-child-width-1-3@m" uk-grid uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 500; repeat: true">
+    <div>
+        <div class="uk-card uk-card-default uk-card-body">
+            <h3 class="uk-card-title">Fade</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-default uk-card-body">
+            <h3 class="uk-card-title">Fade</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-default uk-card-body">
+            <h3 class="uk-card-title">Fade</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-default uk-card-body">
+            <h3 class="uk-card-title">Fade</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-default uk-card-body">
+            <h3 class="uk-card-title">Fade</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-default uk-card-body">
+            <h3 class="uk-card-title">Fade</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+</div>
+
+<div class="uk-child-width-1-3@m" uk-grid uk-scrollspy="cls: uk-animation-slide-bottom; target: .uk-card; delay: 300; repeat: true">
+    <div>
+        <div class="uk-card uk-card-default uk-card-body">
+            <h3 class="uk-card-title">Bottom</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-default uk-card-body" uk-scrollspy-class="uk-animation-slide-top">
+            <h3 class="uk-card-title">Top</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-default uk-card-body">
+            <h3 class="uk-card-title">Bottom</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+</div>
+
+<!------search---->
+<form class="uk-search uk-search-default">
+    <input class="uk-search-input" type="search" placeholder="Search">
+</form>
+
+<div class="uk-margin">
+    <form class="uk-search uk-search-default">
+        <span uk-search-icon></span>
+        <input class="uk-search-input" type="search" placeholder="Search">
+    </form>
+</div>
+
+<div class="uk-margin">
+    <form class="uk-search uk-search-default">
+        <span class="uk-search-icon-flip" uk-search-icon></span>
+        <input class="uk-search-input" type="search" placeholder="Search">
+    </form>
+</div>
+
+<div class="uk-margin">
+    <form class="uk-search uk-search-default">
+        <a href="" uk-search-icon></a>
+        <input class="uk-search-input" type="search" placeholder="Search">
+    </form>
+</div>
+
+<div class="uk-margin">
+    <form class="uk-search uk-search-default">
+        <a href="" class="uk-search-icon-flip" uk-search-icon></a>
+        <input class="uk-search-input" type="search" placeholder="Search">
+    </form>
+</div>
+
+<form class="uk-search uk-search-default">
+    <span uk-search-icon></span>
+    <input class="uk-search-input" type="search" placeholder="Search">
+</form>
+
+<form class="uk-search uk-search-large">
+    <span uk-search-icon></span>
+    <input class="uk-search-input" type="search" placeholder="Search">
+</form>
+
+<nav class="uk-navbar-container" uk-navbar>
+    <div class="uk-navbar-left">
+
+        <div class="uk-navbar-item">
+            <form class="uk-search uk-search-navbar">
+                <span uk-search-icon></span>
+                <input class="uk-search-input" type="search" placeholder="Search">
+            </form>
+        </div>
+
+    </div>
+</nav>
+<a class="uk-search-toggle" href="" uk-search-icon></a>
+
+<nav class="uk-navbar-container uk-margin" uk-navbar>
+
+    <div class="nav-overlay uk-navbar-left">
+
+        <a class="uk-navbar-item uk-logo" href="#">Logo</a>
+
+        <ul class="uk-navbar-nav">
+            <li class="uk-active"><a href="#">Active</a></li>
+            <li><a href="#">Item</a></li>
+        </ul>
+
+    </div>
+
+    <div class="nav-overlay uk-navbar-right">
+
+        <a class="uk-navbar-toggle" uk-search-icon uk-toggle="target: .nav-overlay; animation: uk-animation-fade" href="#"></a>
+
+    </div>
+
+    <div class="nav-overlay uk-navbar-left uk-flex-1" hidden>
+
+        <div class="uk-navbar-item uk-width-expand">
+            <form class="uk-search uk-search-navbar uk-width-1-1">
+                <input class="uk-search-input" type="search" placeholder="Search" autofocus>
+            </form>
+        </div>
+
+        <a class="uk-navbar-toggle" uk-close uk-toggle="target: .nav-overlay; animation: uk-animation-fade" href="#"></a>
+
+    </div>
+
+</nav>
+
+<nav class="uk-navbar-container uk-margin" uk-navbar>
+    <div class="uk-navbar-left">
+
+        <a class="uk-navbar-item uk-logo" href="#">Logo</a>
+
+        <ul class="uk-navbar-nav">
+            <li class="uk-active"><a href="#">Active</a></li>
+            <li><a href="#">Item</a></li>
+        </ul>
+
+    </div>
+    <div class="uk-navbar-right">
+
+        <div>
+            <a class="uk-navbar-toggle" uk-search-icon href="#"></a>
+            <div class="uk-drop" uk-drop="mode: click; pos: left-center; offset: 0">
+                <form class="uk-search uk-search-navbar uk-width-1-1">
+                    <input class="uk-search-input" type="search" placeholder="Search" autofocus>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+<nav class="uk-navbar-container uk-margin" uk-navbar>
+    <div class="uk-navbar-left">
+
+        <a class="uk-navbar-item uk-logo" href="#">Logo</a>
+
+        <ul class="uk-navbar-nav">
+            <li class="uk-active"><a href="#">Active</a></li>
+            <li><a href="#">Item</a></li>
+        </ul>
+
+    </div>
+    <div class="uk-navbar-right">
+
+        <div>
+            <a class="uk-navbar-toggle" href="#" uk-search-icon></a>
+            <div class="uk-navbar-dropdown" uk-drop="mode: click; cls-drop: uk-navbar-dropdown; boundary: !nav">
+
+                <div class="uk-grid-small uk-flex-middle" uk-grid>
+                    <div class="uk-width-expand">
+                        <form class="uk-search uk-search-navbar uk-width-1-1">
+                            <input class="uk-search-input" type="search" placeholder="Search" autofocus>
+                        </form>
+                    </div>
+                    <div class="uk-width-auto">
+                        <a class="uk-navbar-dropdown-close" href="#" uk-close></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+<nav class="uk-navbar uk-navbar-container uk-margin">
+    <div class="uk-navbar-left">
+
+        <a class="uk-navbar-item uk-logo" href="#">Logo</a>
+
+        <ul class="uk-navbar-nav">
+            <li class="uk-active"><a href="#">Active</a></li>
+            <li><a href="#">Item</a></li>
+        </ul>
+
+    </div>
+    <div class="uk-navbar-right">
+
+        <a class="uk-navbar-toggle" href="#modal-full" uk-search-icon uk-toggle></a>
+
+    </div>
+</nav>
+
+<div id="modal-full" class="uk-modal-full uk-modal" uk-modal>
+    <div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle" uk-height-viewport>
+        <button class="uk-modal-close-full" type="button" uk-close></button>
+        <form class="uk-search uk-search-large">
+            <input class="uk-search-input uk-text-center" type="search" placeholder="Search" autofocus>
+        </form>
+    </div>
+</div>
+
+<!-------section----->
+<div class="uk-section uk-section-muted">
+    <div class="uk-container">
+
+        <h3>Section</h3>
+
+        <div class="uk-grid-match uk-child-width-1-3@m" uk-grid>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="uk-section uk-section-default">
+    <div class="uk-container">
+
+        <h3>Section Default</h3>
+
+        <div class="uk-grid-match uk-child-width-1-3@m" uk-grid>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="uk-section uk-section-muted">
+    <div class="uk-container">
+
+        <h3>Section Muted</h3>
+
+        <div class="uk-grid-match uk-child-width-1-3@m" uk-grid>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="uk-section uk-section-primary uk-light">
+    <div class="uk-container">
+
+        <h3>Section Primary</h3>
+
+        <div class="uk-grid-match uk-child-width-1-3@m" uk-grid>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="uk-section uk-section-secondary uk-light">
+    <div class="uk-container">
+
+        <h3>Section Secondary</h3>
+
+        <div class="uk-grid-match uk-child-width-1-3@m" uk-grid>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="uk-section-default">
+    <div class="uk-section uk-light uk-background-cover" style="background-image: url(images/dark.jpg)">
+        <div class="uk-container">
+
+            <h3>Section with Images</h3>
+
+            <div class="uk-grid-match uk-child-width-1-3@m" uk-grid>
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                </div>
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                </div>
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="uk-section uk-section-primary uk-preserve-color">
+    <div class="uk-container">
+
+        <div class="uk-panel uk-light uk-margin-medium">
+            <h3>Section Primary with cards</h3>
+        </div>
+
+        <div class="uk-grid-match uk-child-width-expand@m" uk-grid>
+            <div>
+                <div class="uk-card uk-card-default uk-card-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default uk-card-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="uk-section uk-section-large uk-section-muted">
+    <div class="uk-container">
+
+        <h3>Section Large</h3>
+
+        <div class="uk-grid-match uk-child-width-1-3@m" uk-grid>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--------slidenav----->
+<a href="#" uk-slidenav-previous></a>
+<a href="#" uk-slidenav-next></a>
+
+<a href="#" class="uk-slidenav-large" uk-slidenav-previous></a>
+<a href="#" class="uk-slidenav-large" uk-slidenav-next></a>
+
+<div class="uk-slidenav-container">
+    <a href="" uk-slidenav-previous></a>
+    <a href="" uk-slidenav-next></a>
+</div>
+
+<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow>
+
+    <ul class="uk-slideshow-items">
+        <li>
+            <img src="https://getuikit.com/docs/images/photo.jpg" alt="" uk-cover>
+        </li>
+        <li>
+            <img src="https://getuikit.com/docs/images/dark.jpg" alt="" uk-cover>
+        </li>
+        <li>
+            <img src="https://getuikit.com/docs/images/light.jpg" alt="" uk-cover>
+        </li>
+    </ul>
+
+    <a class="uk-slidenav-large uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+    <a class="uk-slidenav-large uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+</div>
+
+<!-----slider----->
+<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
+
+    <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m">
+        <li>
+            <img src="images/slider1.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>1</h1></div>
+        </li>
+        <li>
+            <img src="images/slider2.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>2</h1></div>
+        </li>
+        <li>
+            <img src="images/slider3.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>3</h1></div>
+        </li>
+        <li>
+            <img src="images/slider4.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>4</h1></div>
+        </li>
+        <li>
+            <img src="images/slider5.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>5</h1></div>
+        </li>
+        <li>
+            <img src="images/slider1.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>6</h1></div>
+        </li>
+        <li>
+            <img src="images/slider2.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>7</h1></div>
+        </li>
+        <li>
+            <img src="images/slider3.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>8</h1></div>
+        </li>
+        <li>
+            <img src="images/slider4.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>9</h1></div>
+        </li>
+        <li>
+            <img src="images/slider5.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>10</h1></div>
+        </li>
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+</div>
+
+<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
+
+    <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@m uk-grid">
+        <li>
+            <div class="uk-panel">
+                <img src="images/slider1.jpg" alt="">
+                <div class="uk-position-center uk-panel"><h1>1</h1></div>
+            </div>
+        </li>
+        <li>
+            <div class="uk-panel">
+                <img src="images/slider2.jpg" alt="">
+                <div class="uk-position-center uk-panel"><h1>2</h1></div>
+            </div>
+        </li>
+        <li>
+            <div class="uk-panel">
+                <img src="images/slider3.jpg" alt="">
+                <div class="uk-position-center uk-panel"><h1>3</h1></div>
+            </div>
+        </li>
+        <li>
+            <div class="uk-panel">
+                <img src="images/slider4.jpg" alt="">
+                <div class="uk-position-center uk-panel"><h1>4</h1></div>
+            </div>
+        </li>
+        <li>
+            <div class="uk-panel">
+                <img src="images/slider5.jpg" alt="">
+                <div class="uk-position-center uk-panel"><h1>5</h1></div>
+            </div>
+        </li>
+        <li>
+            <div class="uk-panel">
+                <img src="images/slider1.jpg" alt="">
+                <div class="uk-position-center uk-panel"><h1>6</h1></div>
+            </div>
+        </li>
+        <li>
+            <div class="uk-panel">
+                <img src="images/slider2.jpg" alt="">
+                <div class="uk-position-center uk-panel"><h1>7</h1></div>
+            </div>
+        </li>
+        <li>
+            <div class="uk-panel">
+                <img src="images/slider3.jpg" alt="">
+                <div class="uk-position-center uk-panel"><h1>8</h1></div>
+            </div>
+        </li>
+        <li>
+            <div class="uk-panel">
+                <img src="images/slider4.jpg" alt="">
+                <div class="uk-position-center uk-panel"><h1>9</h1></div>
+            </div>
+        </li>
+        <li>
+            <div class="uk-panel">
+                <img src="images/slider5.jpg" alt="">
+                <div class="uk-position-center uk-panel"><h1>10</h1></div>
+            </div>
+        </li>
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+</div>
+
+<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="center: true">
+
+    <ul class="uk-slider-items uk-grid">
+        <li class="uk-width-3-4">
+            <div class="uk-panel">
+                <img src="images/photo.jpg" alt="">
+                <div class="uk-position-center uk-panel"><h1>1</h1></div>
+            </div>
+        </li>
+        <li class="uk-width-3-4">
+            <div class="uk-panel">
+                <img src="images/dark.jpg" alt="">
+                <div class="uk-position-center uk-panel"><h1>2</h1></div>
+            </div>
+        </li>
+        <li class="uk-width-3-4">
+            <div class="uk-panel">
+                <img src="images/light.jpg" alt="">
+                <div class="uk-position-center uk-panel"><h1>3</h1></div>
+            </div>
+        </li>
+        <li class="uk-width-3-4">
+            <div class="uk-panel">
+                <img src="images/photo2.jpg" alt="">
+                <div class="uk-position-center uk-panel"><h1>4</h1></div>
+            </div>
+        </li>
+        <li class="uk-width-3-4">
+            <div class="uk-panel">
+                <img src="images/photo3.jpg" alt="">
+                <div class="uk-position-center uk-panel"><h1>5</h1></div>
+            </div>
+        </li>
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+</div>
+
+<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="sets: true">
+
+    <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@m">
+        <li>
+            <img src="images/slider1.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>1</h1></div>
+        </li>
+        <li>
+            <img src="images/slider2.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>2</h1></div>
+        </li>
+        <li>
+            <img src="images/slider3.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>3</h1></div>
+        </li>
+        <li>
+            <img src="images/slider4.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>4</h1></div>
+        </li>
+        <li>
+            <img src="images/slider5.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>5</h1></div>
+        </li>
+        <li>
+            <img src="images/slider1.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>6</h1></div>
+        </li>
+        <li>
+            <img src="images/slider2.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>7</h1></div>
+        </li>
+        <li>
+            <img src="images/slider3.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>8</h1></div>
+        </li>
+        <li>
+            <img src="images/slider4.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>9</h1></div>
+        </li>
+        <li>
+            <img src="images/slider5.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>10</h1></div>
+        </li>
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+</div>
+
+<div uk-slider>
+
+    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+
+        <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m">
+            <li>
+                <img src="images/slider1.jpg" alt="">
+                <div class="uk-position-center uk-panel"><h1>1</h1></div>
+            </li>
+            <li>
+                <img src="images/slider2.jpg" alt="">
+                <div class="uk-position-center uk-panel"><h1>2</h1></div>
+            </li>
+            <li>
+                <img src="images/slider3.jpg" alt="">
+                <div class="uk-position-center uk-panel"><h1>3</h1></div>
+            </li>
+            <li>
+                <img src="images/slider4.jpg" alt="">
+                <div class="uk-position-center uk-panel"><h1>4</h1></div>
+            </li>
+            <li>
+                <img src="images/slider5.jpg" alt="">
+                <div class="uk-position-center uk-panel"><h1>5</h1></div>
+            </li>
+            <li>
+                <img src="images/slider1.jpg" alt="">
+                <div class="uk-position-center uk-panel"><h1>6</h1></div>
+            </li>
+            <li>
+                <img src="images/slider2.jpg" alt="">
+                <div class="uk-position-center uk-panel"><h1>7</h1></div>
+            </li>
+            <li>
+                <img src="images/slider3.jpg" alt="">
+                <div class="uk-position-center uk-panel"><h1>8</h1></div>
+            </li>
+            <li>
+                <img src="images/slider4.jpg" alt="">
+                <div class="uk-position-center uk-panel"><h1>9</h1></div>
+            </li>
+            <li>
+                <img src="images/slider5.jpg" alt="">
+                <div class="uk-position-center uk-panel"><h1>10</h1></div>
+            </li>
+        </ul>
+
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+    </div>
+
+    <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
+</div>
+
+<div uk-slider>
+
+    <div class="uk-position-relative">
+
+        <div class="uk-slider-container uk-light">
+            <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m">
+                <li>
+                    <img src="images/slider1.jpg" alt="">
+                    <div class="uk-position-center uk-panel"><h1>1</h1></div>
+                </li>
+                <li>
+                    <img src="images/slider2.jpg" alt="">
+                    <div class="uk-position-center uk-panel"><h1>2</h1></div>
+                </li>
+                <li>
+                    <img src="images/slider3.jpg" alt="">
+                    <div class="uk-position-center uk-panel"><h1>3</h1></div>
+                </li>
+                <li>
+                    <img src="images/slider4.jpg" alt="">
+                    <div class="uk-position-center uk-panel"><h1>4</h1></div>
+                </li>
+                <li>
+                    <img src="images/slider5.jpg" alt="">
+                    <div class="uk-position-center uk-panel"><h1>5</h1></div>
+                </li>
+                <li>
+                    <img src="images/slider1.jpg" alt="">
+                    <div class="uk-position-center uk-panel"><h1>6</h1></div>
+                </li>
+                <li>
+                    <img src="images/slider2.jpg" alt="">
+                    <div class="uk-position-center uk-panel"><h1>7</h1></div>
+                </li>
+                <li>
+                    <img src="images/slider3.jpg" alt="">
+                    <div class="uk-position-center uk-panel"><h1>8</h1></div>
+                </li>
+                <li>
+                    <img src="images/slider4.jpg" alt="">
+                    <div class="uk-position-center uk-panel"><h1>9</h1></div>
+                </li>
+                <li>
+                    <img src="images/slider5.jpg" alt="">
+                    <div class="uk-position-center uk-panel"><h1>10</h1></div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="uk-hidden@s uk-light">
+            <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+            <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next uk-slider-item="next"></a>
+        </div>
+
+        <div class="uk-visible@s">
+            <a class="uk-position-center-left-out uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+            <a class="uk-position-center-right-out uk-position-small" href="#" uk-slidenav-next uk-slider-item="next"></a>
+        </div>
+
+    </div>
+
+    <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
+</div>
+
+<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="center: true">
+
+    <ul class="uk-slider-items uk-grid uk-grid-match" uk-height-viewport="offset-top: true; offset-bottom: 30">
+        <li class="uk-width-3-4">
+            <div class="uk-cover-container">
+                <img src="images/photo.jpg" alt="" uk-cover>
+                <div class="uk-position-center uk-panel"><h1>1</h1></div>
+            </div>
+        </li>
+        <li class="uk-width-3-4">
+            <div class="uk-cover-container">
+                <img src="images/dark.jpg" alt="" uk-cover>
+                <div class="uk-position-center uk-panel"><h1>2</h1></div>
+            </div>
+        </li>
+        <li class="uk-width-3-4">
+            <div class="uk-cover-container">
+                <img src="images/light.jpg" alt="" uk-cover>
+                <div class="uk-position-center uk-panel"><h1>3</h1></div>
+            </div>
+        </li>
+        <li class="uk-width-3-4">
+            <div class="uk-cover-container">
+                <img src="images/photo2.jpg" alt="" uk-cover>
+                <div class="uk-position-center uk-panel"><h1>4</h1></div>
+            </div>
+        </li>
+        <li class="uk-width-3-4">
+            <div class="uk-cover-container">
+                <img src="images/photo3.jpg" alt="" uk-cover>
+                <div class="uk-position-center uk-panel"><h1>5</h1></div>
+            </div>
+        </li>
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+</div>
+
+<div class="uk-slider-container-offset" uk-slider>
+
+    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+
+        <ul class="uk-slider-items uk-child-width-1-2@s uk-grid">
+            <li>
+                <div class="uk-card uk-card-default">
+                    <div class="uk-card-media-top">
+                        <img src="images/photo.jpg" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Headline</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="uk-card uk-card-default">
+                    <div class="uk-card-media-top">
+                        <img src="images/dark.jpg" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Headline</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="uk-card uk-card-default">
+                    <div class="uk-card-media-top">
+                        <img src="images/light.jpg" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Headline</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="uk-card uk-card-default">
+                    <div class="uk-card-media-top">
+                        <img src="images/photo2.jpg" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Headline</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="uk-card uk-card-default">
+                    <div class="uk-card-media-top">
+                        <img src="images/photo3.jpg" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Headline</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+    </div>
+
+    <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
+</div>
+
+<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
+
+    <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m">
+        <li>
+            <img src="https://getuikit.com/docs/images/slider1.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>1</h1></div>
+        </li>
+        <li>
+            <img src="https://getuikit.com/docs/images/slider2.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>2</h1></div>
+        </li>
+        <li>
+            <img src="https://getuikit.com/docs/images/slider3.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>3</h1></div>
+        </li>
+        <li>
+            <img src="https://getuikit.com/docs/images/slider4.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>4</h1></div>
+        </li>
+        <li>
+            <img src="https://getuikit.com/docs/images/slider5.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>5</h1></div>
+        </li>
+        <li>
+            <img src="https://getuikit.com/docs/images/slider1.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>6</h1></div>
+        </li>
+        <li>
+            <img src="https://getuikit.com/docs/images/slider2.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>7</h1></div>
+        </li>
+        <li>
+            <img src="https://getuikit.com/docs/images/slider3.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>8</h1></div>
+        </li>
+        <li>
+            <img src="https://getuikit.com/docs/images/slider4.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>9</h1></div>
+        </li>
+        <li>
+            <img src="https://getuikit.com/docs/images/slider5.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>10</h1></div>
+        </li>
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+</div>
+
+<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
+
+    <ul class="uk-slider-items uk-grid">
+        <li class="uk-width-4-5">
+            <div class="uk-panel">
+                <img src="https://getuikit.com/docs/images/photo.jpg" alt="">
+                <div class="uk-position-center uk-text-center">
+                    <h2 uk-slider-parallax="x: 100,-100">Heading</h2>
+                    <p uk-slider-parallax="x: 200,-200">Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+        </li>
+        <li class="uk-width-4-5">
+            <div class="uk-panel">
+                <img src="https://getuikit.com/docs/images/dark.jpg" alt="">
+                <div class="uk-position-center uk-text-center">
+                    <h2 uk-slider-parallax="x: 100,-100">Heading</h2>
+                    <p uk-slider-parallax="x: 200,-200">Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+        </li>
+        <li class="uk-width-4-5">
+            <div class="uk-panel">
+                <img src="https://getuikit.com/docs/images/light.jpg" alt="">
+                <div class="uk-position-center uk-text-center">
+                    <h2 uk-slider-parallax="x: 100,-100">Heading</h2>
+                    <p uk-slider-parallax="x: 200,-200">Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+        </li>
+        <li class="uk-width-4-5">
+            <div class="uk-panel">
+                <img src="https://getuikit.com/docs/images/photo2.jpg" alt="">
+                <div class="uk-position-center uk-text-center">
+                    <h2 uk-slider-parallax="x: 100,-100">Heading</h2>
+                    <p uk-slider-parallax="x: 200,-200">Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+        </li>
+        <li class="uk-width-4-5">
+            <div class="uk-panel">
+                <img src="https://getuikit.com/docs/images/photo3.jpg" alt="">
+                <div class="uk-position-center uk-text-center">
+                    <h2 uk-slider-parallax="x: 100,-100">Heading</h2>
+                    <p uk-slider-parallax="x: 200,-200">Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+</div>
+
+<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="clsActivated: uk-transition-active; center: true">
+
+    <ul class="uk-slider-items uk-grid">
+        <li class="uk-width-3-4">
+            <div class="uk-panel">
+                <img src="https://getuikit.com/docs/images/photo.jpg" alt="">
+                <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                    <h3 class="uk-margin-remove">Bottom</h3>
+                    <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </li>
+        <li class="uk-width-3-4">
+            <div class="uk-panel">
+                <img src="https://getuikit.com/docs/images/dark.jpg" alt="">
+                <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                    <h3 class="uk-margin-remove">Bottom</h3>
+                    <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </li>
+        <li class="uk-width-3-4">
+            <div class="uk-panel">
+                <img src="https://getuikit.com/docs/images/light.jpg" alt="">
+                <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                    <h3 class="uk-margin-remove">Bottom</h3>
+                    <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </li>
+        <li class="uk-width-3-4">
+            <div class="uk-panel">
+                <img src="https://getuikit.com/docs/images/photo2.jpg" alt="">
+                <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                    <h3 class="uk-margin-remove">Bottom</h3>
+                    <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </li>
+        <li class="uk-width-3-4">
+            <div class="uk-panel">
+                <img src="https://getuikit.com/docs/images/photo3.jpg" alt="">
+                <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                    <h3 class="uk-margin-remove">Bottom</h3>
+                    <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+</div>
+
+<div uk-slider>
+
+    <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m uk-light">
+        <li class="uk-transition-toggle" tabindex="0">
+            <img src="https://getuikit.com/docs/images/slider1.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1 class="uk-transition-slide-bottom-small">1</h1></div>
+        </li>
+        <li class="uk-transition-toggle" tabindex="0">
+            <img src="https://getuikit.com/docs/images/slider2.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1 class="uk-transition-slide-bottom-small">2</h1></div>
+        </li>
+        <li class="uk-transition-toggle" tabindex="0">
+            <img src="https://getuikit.com/docs/images/slider3.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1 class="uk-transition-slide-bottom-small">3</h1></div>
+        </li>
+        <li class="uk-transition-toggle" tabindex="0">
+            <img src="https://getuikit.com/docs/images/slider4.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1 class="uk-transition-slide-bottom-small">4</h1></div>
+        </li>
+        <li class="uk-transition-toggle" tabindex="0">
+            <img src="https://getuikit.com/docs/images/slider5.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1 class="uk-transition-slide-bottom-small">5</h1></div>
+        </li>
+        <li class="uk-transition-toggle" tabindex="0">
+            <img src="https://getuikit.com/docs/images/slider1.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1 class="uk-transition-slide-bottom-small">6</h1></div>
+        </li>
+        <li class="uk-transition-toggle" tabindex="0">
+            <img src="https://getuikit.com/docs/images/slider2.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1 class="uk-transition-slide-bottom-small">7</h1></div>
+        </li>
+        <li class="uk-transition-toggle" tabindex="0">
+            <img src="https://getuikit.com/docs/images/slider3.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1 class="uk-transition-slide-bottom-small">8</h1></div>
+        </li>
+        <li class="uk-transition-toggle" tabindex="0">
+            <img src="https://getuikit.com/docs/images/slider4.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1 class="uk-transition-slide-bottom-small">9</h1></div>
+        </li>
+        <li class="uk-transition-toggle" tabindex="0">
+            <img src="https://getuikit.com/docs/images/slider5.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1 class="uk-transition-slide-bottom-small">10</h1></div>
+        </li>
+    </ul>
+
+    <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
+</div>
+<!------slideshow---->
+<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow>
+
+    <ul class="uk-slideshow-items">
+        <li>
+            <img src="images/photo.jpg" alt="" uk-cover>
+        </li>
+        <li>
+            <img src="images/dark.jpg" alt="" uk-cover>
+        </li>
+        <li>
+            <img src="images/light.jpg" alt="" uk-cover>
+        </li>
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+</div>
+
+<div class="uk-child-width-1-2@m" uk-grid>
+    <div>
+
+        <div class="uk-h3">Slide</div>
+
+        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow>
+
+            <ul class="uk-slideshow-items">
+                <li>
+                    <img src="images/photo.jpg" alt="" uk-cover>
+                </li>
+                <li>
+                    <img src="images/dark.jpg" alt="" uk-cover>
+                </li>
+                <li>
+                    <img src="images/light.jpg" alt="" uk-cover>
+                </li>
+            </ul>
+
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+        </div>
+
+    </div>
+    <div>
+
+        <div class="uk-h3">Fade</div>
+
+        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation: fade">
+
+            <ul class="uk-slideshow-items">
+                <li>
+                    <img src="images/photo.jpg" alt="" uk-cover>
+                </li>
+                <li>
+                    <img src="images/dark.jpg" alt="" uk-cover>
+                </li>
+                <li>
+                    <img src="images/light.jpg" alt="" uk-cover>
+                </li>
+            </ul>
+
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+        </div>
+
+    </div>
+    <div>
+
+        <div class="uk-h3">Scale</div>
+
+        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation: scale">
+
+            <ul class="uk-slideshow-items">
+                <li>
+                    <img src="images/photo.jpg" alt="" uk-cover>
+                </li>
+                <li>
+                    <img src="images/dark.jpg" alt="" uk-cover>
+                </li>
+                <li>
+                    <img src="images/light.jpg" alt="" uk-cover>
+                </li>
+            </ul>
+
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+        </div>
+
+    </div>
+    <div>
+
+        <div class="uk-h3">Pull</div>
+
+        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation: pull">
+
+            <ul class="uk-slideshow-items">
+                <li>
+                    <img src="images/photo.jpg" alt="" uk-cover>
+                </li>
+                <li>
+                    <img src="images/dark.jpg" alt="" uk-cover>
+                </li>
+                <li>
+                    <img src="images/light.jpg" alt="" uk-cover>
+                </li>
+            </ul>
+
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+        </div>
+
+    </div>
+    <div>
+
+        <div class="uk-h3">Push</div>
+
+        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation: push">
+
+            <ul class="uk-slideshow-items">
+                <li>
+                    <img src="images/photo.jpg" alt="" uk-cover>
+                </li>
+                <li>
+                    <img src="images/dark.jpg" alt="" uk-cover>
+                </li>
+                <li>
+                    <img src="images/light.jpg" alt="" uk-cover>
+                </li>
+            </ul>
+
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="ratio: 7:3; animation: push">
+
+    <ul class="uk-slideshow-items">
+        <li>
+            <img src="images/photo.jpg" alt="" uk-cover>
+        </li>
+        <li>
+            <img src="images/dark.jpg" alt="" uk-cover>
+        </li>
+        <li>
+            <img src="images/light.jpg" alt="" uk-cover>
+        </li>
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+</div>
+
+<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="min-height: 300; max-height: 600; animation: push">
+
+    <ul class="uk-slideshow-items">
+        <li>
+            <img src="images/photo.jpg" alt="" uk-cover>
+        </li>
+        <li>
+            <img src="images/dark.jpg" alt="" uk-cover>
+        </li>
+        <li>
+            <img src="images/light.jpg" alt="" uk-cover>
+        </li>
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+</div>
+
+<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="ratio: false">
+
+    <ul class="uk-slideshow-items" uk-height-viewport="offset-top: true; offset-bottom: 30">
+        <li>
+            <img src="images/photo.jpg" alt="" uk-cover>
+        </li>
+        <li>
+            <img src="images/dark.jpg" alt="" uk-cover>
+        </li>
+        <li>
+            <img src="images/light.jpg" alt="" uk-cover>
+        </li>
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+</div>
+
+<div uk-slideshow="animation: push">
+
+    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+
+        <ul class="uk-slideshow-items">
+            <li>
+                <img src="images/photo.jpg" alt="" uk-cover>
+            </li>
+            <li>
+                <img src="images/dark.jpg" alt="" uk-cover>
+            </li>
+            <li>
+                <img src="images/light.jpg" alt="" uk-cover>
+            </li>
+        </ul>
+
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+    </div>
+
+    <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
+</div>
+
+<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation: push">
+
+    <ul class="uk-slideshow-items">
+        <li>
+            <img src="images/photo.jpg" alt="" uk-cover>
+        </li>
+        <li>
+            <video src="https://yootheme.com/site/images/media/yootheme-pro.mp4" autoplay loop muted playsinline uk-cover></video>
+        </li>
+        <li>
+            <iframe src="https://www.youtube-nocookie.com/embed/c2pz2mlSfXA?autoplay=1&amp;controls=0&amp;showinfo=0&amp;rel=0&amp;loop=1&amp;modestbranding=1&amp;wmode=transparent&amp;playsinline=1" width="1920" height="1080" frameborder="0" allowfullscreen uk-cover></iframe>
+        </li>
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+</div>
+<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation: push">
+
+    <ul class="uk-slideshow-items">
+        <li>
+            <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left">
+                <img src="images/photo.jpg" alt="" uk-cover>
+            </div>
+        </li>
+        <li>
+            <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-top-right">
+                <img src="images/dark.jpg" alt="" uk-cover>
+            </div>
+        </li>
+        <li>
+            <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-bottom-left">
+                <img src="images/light.jpg" alt="" uk-cover>
+            </div>
+        </li>
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+</div>
+
+<div class="uk-position-relative uk-visible-toggle" tabindex="-1" uk-slideshow="animation: push">
+
+    <ul class="uk-slideshow-items">
+        <li>
+            <img src="images/photo.jpg" alt="" uk-cover>
+            <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                <h2 class="uk-margin-remove">Center</h2>
+                <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </li>
+        <li>
+            <img src="images/dark.jpg" alt="" uk-cover>
+            <div class="uk-position-bottom uk-position-medium uk-text-center uk-light">
+                <h3 class="uk-margin-remove">Bottom</h3>
+                <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </li>
+        <li>
+            <img src="images/light.jpg" alt="" uk-cover>
+            <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center">
+                <h3 class="uk-margin-remove">Overlay Bottom</h3>
+                <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </li>
+        <li>
+            <img src="images/dark.jpg" alt="" uk-cover>
+            <div class="uk-overlay uk-overlay-default uk-position-bottom-right uk-position-small">
+                <h3 class="uk-margin-remove">Overlay Bottom Right</h3>
+                <p class="uk-margin-remove">Lorem ipsum dolor sit amet.</p>
+            </div>
+        </li>
+    </ul>
+
+    <div class="uk-light">
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+    </div>
+
+</div>
+
+<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation: push">
+
+    <ul class="uk-slideshow-items">
+        <li>
+            <img src="images/photo.jpg" alt="" uk-cover>
+            <div class="uk-position-center uk-position-small uk-text-center">
+                <h2 uk-slideshow-parallax="x: 100,-100">Heading</h2>
+                <p uk-slideshow-parallax="x: 200,-200">Lorem ipsum dolor sit amet.</p>
+            </div>
+        </li>
+        <li>
+            <img src="images/dark.jpg" alt="" uk-cover>
+            <div class="uk-position-center uk-position-small uk-text-center">
+                <h2 uk-slideshow-parallax="x: 100,-100">Heading</h2>
+                <p uk-slideshow-parallax="x: 200,-200">Lorem ipsum dolor sit amet.</p>
+            </div>
+        </li>
+        <li>
+            <img src="images/light.jpg" alt="" uk-cover>
+            <div class="uk-position-center uk-position-small uk-text-center">
+                <h2 uk-slideshow-parallax="y: -50,0,0; opacity: 1,1,0">Heading</h2>
+                <p uk-slideshow-parallax="y: 50,0,0; opacity: 1,1,0">Lorem ipsum dolor sit amet.</p>
+            </div>
+        </li>
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+</div>
+
+<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation: push">
+
+    <ul class="uk-slideshow-items">
+        <li>
+            <div class="uk-position-cover" uk-slideshow-parallax="scale: 1.2,1.2,1">
+                <img src="images/photo.jpg" alt="" uk-cover>
+            </div>
+            <div class="uk-position-cover" uk-slideshow-parallax="opacity: 0,0,0.2; backgroundColor: #000,#000"></div>
+            <div class="uk-position-center uk-position-medium uk-text-center">
+                <div uk-slideshow-parallax="scale: 1,1,0.8">
+                    <h2 uk-slideshow-parallax="x: 200,0,0">Heading</h2>
+                    <p uk-slideshow-parallax="x: 400,0,0;">Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="uk-position-cover" uk-slideshow-parallax="scale: 1.2,1.2,1">
+                <img src="images/dark.jpg" alt="" uk-cover>
+            </div>
+            <div class="uk-position-cover" uk-slideshow-parallax="opacity: 0,0,0.2; backgroundColor: #000,#000"></div>
+            <div class="uk-position-center uk-position-medium uk-text-center">
+                <div uk-slideshow-parallax="scale: 1,1,0.8">
+                    <h2 uk-slideshow-parallax="x: 200,0,0">Heading</h2>
+                    <p uk-slideshow-parallax="x: 400,0,0;">Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="uk-position-cover" uk-slideshow-parallax="scale: 1.2,1.2,1">
+                <img src="images/light.jpg" alt="" uk-cover>
+            </div>
+            <div class="uk-position-cover" uk-slideshow-parallax="opacity: 0,0,0.2; backgroundColor: #000,#000"></div>
+            <div class="uk-position-center uk-position-medium uk-text-center">
+                <div uk-slideshow-parallax="scale: 1,1,0.8">
+                    <h2 uk-slideshow-parallax="x: 200,0,0">Heading</h2>
+                    <p uk-slideshow-parallax="x: 400,0,0;">Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+</div>
+
+<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation: fade">
+
+    <ul class="uk-slideshow-items">
+        <li>
+            <img src="images/photo.jpg" alt="" uk-cover>
+            <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                <h3 class="uk-margin-remove">Bottom</h3>
+                <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </li>
+        <li>
+            <img src="images/dark.jpg" alt="" uk-cover>
+            <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                <h3 class="uk-margin-remove">Bottom</h3>
+                <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </li>
+        <li>
+            <img src="images/light.jpg" alt="" uk-cover>
+            <div class="uk-overlay uk-overlay-primary uk-position-right uk-text-center uk-transition-slide-right uk-width-medium">
+                <h3 class="uk-margin-remove">Left</h3>
+                <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </li>
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+</div>
+
+<!------sortable---->
+<ul class="uk-grid-small uk-child-width-1-2 uk-child-width-1-4@s" uk-sortable="handle: .uk-card" uk-grid>
+    <li>
+        <div class="uk-card uk-card-default uk-card-body uk-text-center">Item 1</div>
+    </li>
+    <li>
+        <div class="uk-card uk-card-default uk-card-body uk-text-center">Item 2</div>
+    </li>
+    <li>
+        <div class="uk-card uk-card-default uk-card-body uk-text-center">Item 3</div>
+    </li>
+    <li>
+        <div class="uk-card uk-card-default uk-card-body uk-text-center">Item 4</div>
+    </li>
+    <li>
+        <div class="uk-card uk-card-default uk-card-body uk-text-center">Item 5</div>
+    </li>
+    <li>
+        <div class="uk-card uk-card-default uk-card-body uk-text-center">Item 6</div>
+    </li>
+    <li>
+        <div class="uk-card uk-card-default uk-card-body uk-text-center">Item 7</div>
+    </li>
+    <li>
+        <div class="uk-card uk-card-default uk-card-body uk-text-center">Item 8</div>
+    </li>
+</ul>
+
+<ul class="uk-grid-small uk-child-width-1-2 uk-child-width-1-4@s" uk-sortable="handle: .uk-sortable-handle" uk-grid>
+    <li>
+        <div class="uk-card uk-card-default uk-card-body">
+            <span class="uk-sortable-handle uk-margin-small-right uk-text-center" uk-icon="icon: table"></span>Item 1
+        </div>
+    </li>
+    <li>
+        <div class="uk-card uk-card-default uk-card-body">
+            <span class="uk-sortable-handle uk-margin-small-right uk-text-center" uk-icon="icon: table"></span>Item 2
+        </div>
+    </li>
+    <li>
+        <div class="uk-card uk-card-default uk-card-body">
+            <span class="uk-sortable-handle uk-margin-small-right uk-text-center" uk-icon="icon: table"></span>Item 3
+        </div>
+    </li>
+    <li>
+        <div class="uk-card uk-card-default uk-card-body">
+            <span class="uk-sortable-handle uk-margin-small-right uk-text-center" uk-icon="icon: table"></span>Item 4
+        </div>
+    </li>
+    <li>
+        <div class="uk-card uk-card-default uk-card-body">
+            <span class="uk-sortable-handle uk-margin-small-right uk-text-center" uk-icon="icon: table"></span>Item 5
+        </div>
+    </li>
+    <li>
+        <div class="uk-card uk-card-default uk-card-body">
+            <span class="uk-sortable-handle uk-margin-small-right uk-text-center" uk-icon="icon: table"></span>Item 6
+        </div>
+    </li>
+    <li>
+        <div class="uk-card uk-card-default uk-card-body">
+            <span class="uk-sortable-handle uk-margin-small-right uk-text-center" uk-icon="icon: table"></span>Item 7
+        </div>
+    </li>
+    <li>
+        <div class="uk-card uk-card-default uk-card-body">
+            <span class="uk-sortable-handle uk-margin-small-right uk-text-center" uk-icon="icon: table"></span>Item 8
+        </div>
+    </li>
+</ul>
+
+<div class="uk-child-width-1-3@s" uk-grid>
+    <div>
+        <h4>Group 1</h4>
+        <div uk-sortable="group: sortable-group">
+            <div class="uk-margin">
+                <div class="uk-card uk-card-default uk-card-body uk-card-small">Item 1</div>
+            </div>
+            <div class="uk-margin">
+                <div class="uk-card uk-card-default uk-card-body uk-card-small">Item 2</div>
+            </div>
+            <div class="uk-margin">
+                <div class="uk-card uk-card-default uk-card-body uk-card-small">Item 3</div>
+            </div>
+            <div class="uk-margin">
+                <div class="uk-card uk-card-default uk-card-body uk-card-small">Item 4</div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h4>Group 2</h4>
+        <div uk-sortable="group: sortable-group">
+            <div class="uk-margin">
+                <div class="uk-card uk-card-default uk-card-body uk-card-small">Item 1</div>
+            </div>
+            <div class="uk-margin">
+                <div class="uk-card uk-card-default uk-card-body uk-card-small">Item 2</div>
+            </div>
+            <div class="uk-margin">
+                <div class="uk-card uk-card-default uk-card-body uk-card-small">Item 3</div>
+            </div>
+            <div class="uk-margin">
+                <div class="uk-card uk-card-default uk-card-body uk-card-small">Item 4</div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h4>Empty Group</h4>
+        <div uk-sortable="group: sortable-group">
+    </div>
+</div>
+    
+    <ul class="uk-nav uk-nav-default uk-width-medium" uk-sortable="cls-custom: uk-box-shadow-small uk-flex uk-flex-middle uk-background">
+    <li class="uk-active"><a href="#">Active</a></li>
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+</ul>
+    
+ <!------spinner----->
+ <div uk-spinner></div>
+ 
+ <span class="uk-margin-small-right" uk-spinner="ratio: 3"></span>
+<span uk-spinner="ratio: 4.5"></span>
+
+<!------sticky----->
+<div class="uk-card uk-card-default uk-card-body" style="z-index: 980;" uk-sticky="bottom: #offset">Stick to the top</div>
+<div class="uk-card uk-card-default uk-card-body" style="z-index: 980;" uk-sticky="offset: 100; bottom: #top">Stick 100px below the top</div>
+
+<div class="uk-child-width-1-2@s" uk-grid>
+    <div>
+        <div class="uk-card uk-card-default uk-card-body" style="z-index: 980;" uk-sticky="top: 200; bottom: #animation">Stick to the top but only after 200px scrolling</div>
+    </div>
+    <div>
+        <div id="container-1" class="uk-background-muted uk-height-medium" style="margin-bottom: 200px;">
+            <div class="uk-card uk-card-default uk-card-body" style="z-index: 980;" uk-sticky="top: #container-1; bottom: #animation">Stick to the top but below the box</div>
+        </div>
+    </div>
+</div>
+
+<div class="uk-card uk-card-default uk-card-body" style="margin-bottom: 200px; z-index: 980;" uk-sticky="top: 100; animation: uk-animation-slide-top; bottom: #sticky-on-scroll-up">Animation Slide Top</div>
+
+<div class="uk-card uk-card-default uk-card-body" style="margin-bottom: 200px; z-index: 980;" uk-sticky="show-on-up: true; animation: uk-animation-slide-top; bottom: #bottom">Slide in on scroll up</div>
+
+<div class="uk-child-width-1-2@s" uk-grid>
+    <div>
+        <div class="uk-background-muted uk-height-medium">
+            <div class="uk-height-medium uk-background-muted">
+                <div class="uk-card uk-card-default uk-card-body" style="z-index: 980;" uk-sticky="bottom: true">Stick until the bottom of its parent container</div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body" style="z-index: 980;" uk-sticky="bottom: #container-2">Stick until the next headline</div>
+        </div>
+    </div>
+</div>
+
+<h3 id="container-2">Some Headline</h3>
+
+<!----subnav------>
+<ul class="uk-subnav" uk-margin>
+    <li class="uk-active"><a href="#">Active</a></li>
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+    <li><span>Disabled</span></li>
+</ul>
+
+<ul class="uk-subnav uk-subnav-divider" uk-margin>
+    <li class="uk-active"><a href="#">Active</a></li>
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+</ul>
+
+<ul class="uk-subnav uk-subnav-pill" uk-margin>
+    <li class="uk-active"><a href="#">Active</a></li>
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+</ul>
+
+<ul class="uk-subnav uk-subnav-pill" uk-margin>
+    <li class="uk-active"><a href="#">Active</a></li>
+    <li><a href="#">Item</a></li>
+    <li>
+        <a href="#">More <span uk-icon="icon:  triangle-down"></span></a>
+        <div uk-dropdown="mode: click;">
+            <ul class="uk-nav uk-dropdown-nav">
+                <li class="uk-active"><a href="#">Active</a></li>
+                <li><a href="#">Item</a></li>
+                <li class="uk-nav-header">Header</li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+                <li class="uk-nav-divider"></li>
+                <li><a href="#">Item</a></li>
+            </ul>
+        </div>
+    </li>
+</ul>
+
+<!-------svg---->
+<!-- Targets the SVG image -->
+<img src="https://getuikit.com/docs/assets/uikit/src/images/icons/cloud-download.svg" width="40" height="40" uk-svg>
+
+<!-- Targets a symbol inside the SVG image -->
+<img src="https://getuikit.com/docs/assets/uikit/tests/images/icons.svg#cloud-upload" width="40" height="40" uk-svg>
+
+<!------switcher----->
+<ul class="uk-subnav uk-subnav-pill" uk-switcher>
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+</ul>
+
+<ul class="uk-switcher uk-margin">
+    <li>Hello!</li>
+    <li>Hello again!</li>
+    <li>Bazinga!</li>
+</ul>
+
+<ul class="uk-subnav uk-subnav-pill" uk-switcher>
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+</ul>
+<ul class="uk-switcher uk-margin">
+    <li>Hello! <a href="#" uk-switcher-item="2">Switch to item 3</a></li>
+    <li>Hello again! <a href="#" uk-switcher-item="next">Next item</a></li>
+    <li>Bazinga! <a href="#" uk-switcher-item="previous">Previous item</a></li>
+</ul>
+
+<ul class="uk-subnav uk-subnav-pill" uk-switcher>
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+</ul>
+<ul class="uk-switcher uk-margin">
+    <li>Hello! <a href="#" uk-switcher-item="2">Switch to item 3</a></li>
+    <li>Hello again! <a href="#" uk-switcher-item="next">Next item</a></li>
+    <li>Bazinga! <a href="#" uk-switcher-item="previous">Previous item</a></li>
+</ul>
+
+<ul class="uk-subnav uk-subnav-pill" uk-switcher="animation: uk-animation-fade">
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+</ul>
+
+<ul class="uk-switcher uk-margin">
+    <li>Hello!</li>
+    <li>Hello again!</li>
+    <li>Bazinga!</li>
+</ul>
+
+<ul class="uk-subnav uk-subnav-pill" uk-switcher="animation: uk-animation-slide-left-medium, uk-animation-slide-right-medium">
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+</ul>
+
+<ul class="uk-switcher uk-margin">
+    <li>Hello!</li>
+    <li>Hello again!</li>
+    <li>Bazinga!</li>
+</ul>
+
+<ul class="uk-subnav uk-subnav-pill" uk-switcher="animation: uk-animation-slide-left-medium, uk-animation-slide-right-medium">
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+</ul>
+
+<ul class="uk-switcher uk-margin">
+    <li>Hello!</li>
+    <li>Hello again!</li>
+    <li>Bazinga!</li>
+</ul>
+
+<ul uk-tab>
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+</ul>
+
+<ul class="uk-switcher uk-margin">
+    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+    <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+    <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, sed do eiusmod.</li>
+</ul>
+
+<ul uk-tab>
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+</ul>
+
+<ul class="uk-switcher uk-margin">
+    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+    <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+    <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, sed do eiusmod.</li>
+</ul>
+
+<div class="uk-child-width-1-2@s" uk-grid>
+    <div>
+        <div uk-grid>
+            <div class="uk-width-auto@m">
+                <ul class="uk-tab-left" uk-tab="connect: #component-tab-left; animation: uk-animation-fade">
+                    <li><a href="#">Active</a></li>
+                    <li><a href="#">Item</a></li>
+                    <li><a href="#">Item</a></li>
+                </ul>
+            </div>
+            <div class="uk-width-expand@m">
+                <ul id="component-tab-left" class="uk-switcher">
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                    <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                    <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, sed do eiusmod.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div uk-grid>
+            <div class="uk-width-auto@m uk-flex-last@m">
+                <ul class="uk-tab-right" uk-tab="connect: #component-tab-right; animation: uk-animation-fade">
+                    <li><a href="#">Active</a></li>
+                    <li><a href="#">Item</a></li>
+                    <li><a href="#">Item</a></li>
+                </ul>
+            </div>
+            <div class="uk-width-expand@m">
+                <ul id="component-tab-right" class="uk-switcher">
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                    <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                    <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, sed do eiusmod.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div uk-switcher="animation: uk-animation-fade; toggle: > *">
+    <button class="uk-button uk-button-default" type="button">Item</button>
+    <button class="uk-button uk-button-default" type="button">Item</button>
+    <button class="uk-button uk-button-default" type="button">Item</button>
+</div>
+
+<ul class="uk-switcher uk-margin">
+    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+    <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+    <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, sed do eiusmod.</li>
+</ul>
+
+<div uk-grid>
+    <div class="uk-width-small@m">
+
+        <ul class="uk-nav uk-nav-default" uk-switcher="connect: #component-nav; animation: uk-animation-fade">
+            <li><a href="#">Active</a></li>
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
+        </ul>
+
+    </div>
+    <div class="uk-width-expand@m">
+
+        <ul id="component-nav" class="uk-switcher">
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+            <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+            <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, sed do eiusmod.</li>
+        </ul>
+
+    </div>
+</div>
+<!------tab----->
+<ul uk-tab>
+    <li class="uk-active"><a href="#">Left</a></li>
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+    <li class="uk-disabled"><a>Disabled</a></li>
+</ul>
+
+<ul class="uk-tab-bottom" uk-tab>
+    <li class="uk-active"><a href="#">Left</a></li>
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+</ul>
+
+<div class="uk-child-width-1-2@s" uk-grid>
+    <div>
+        <ul class="uk-tab-left" uk-tab>
+            <li class="uk-active"><a href="#">Left</a></li>
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
+        </ul>
+    </div>
+
+    <div>
+        <ul class="uk-tab-right" uk-tab>
+            <li class="uk-active"><a href="#">Right</a></li>
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="uk-margin-medium-top">
+    <ul class="uk-flex-center" uk-tab>
+        <li class="uk-active"><a href="#">Center</a></li>
+        <li><a href="#">Item</a></li>
+        <li><a href="#">Item</a></li>
+    </ul>
+</div>
+
+<div>
+    <ul class="uk-flex-right" uk-tab>
+        <li class="uk-active"><a href="#">Right</a></li>
+        <li><a href="#">Item</a></li>
+        <li><a href="#">Item</a></li>
+    </ul>
+</div>
+
+<div>
+    <ul class="uk-child-width-expand" uk-tab>
+        <li class="uk-active"><a href="#">Justify</a></li>
+        <li><a href="#">Item</a></li>
+        <li><a href="#">Item</a></li>
+        <li><a href="#">Item</a></li>
+    </ul>
+</div>
+
+<ul uk-tab>
+    <li class="uk-active"><a href="#">Active</a></li>
+    <li><a href="#">Item</a></li>
+    <li>
+        <a href="#">More <span class="uk-margin-small-left" uk-icon="icon: triangle-down"></span></a>
+        <div uk-dropdown="mode: click">
+            <ul class="uk-nav uk-dropdown-nav">
+                <li class="uk-active"><a href="#">Active</a></li>
+                <li><a href="#">Item</a></li>
+                <li class="uk-nav-header">Header</li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+                <li class="uk-nav-divider"></li>
+                <li><a href="#">Item</a></li>
+            </ul>
+        </div>
+    </li>
+</ul>
+
+
+<!-----table---->
+<table class="uk-table">
+    <caption>Table Caption</caption>
+    <thead>
+        <tr>
+            <th>Table Heading</th>
+            <th>Table Heading</th>
+            <th>Table Heading</th>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <td>Table Footer</td>
+            <td>Table Footer</td>
+            <td>Table Footer</td>
+        </tr>
+    </tfoot>
+    <tbody>
+        <tr>
+            <td>Table Data</td>
+            <td>Table Data</td>
+            <td>Table Data</td>
+        </tr>
+        <tr>
+            <td>Table Data</td>
+            <td>Table Data</td>
+            <td>Table Data</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<table class="uk-table uk-table-divider">
+    <thead>
+        <tr>
+            <th>Table Heading</th>
+            <th>Table Heading</th>
+            <th>Table Heading</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Table Data</td>
+            <td>Table Data</td>
+            <td>Table Data</td>
+        </tr>
+        <tr>
+            <td>Table Data</td>
+            <td>Table Data</td>
+            <td>Table Data</td>
+        </tr>
+        <tr>
+            <td>Table Data</td>
+            <td>Table Data</td>
+            <td>Table Data</td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="uk-table uk-table-striped">
+    <thead>
+        <tr>
+            <th>Table Heading</th>
+            <th>Table Heading</th>
+            <th>Table Heading</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Table Data</td>
+            <td>Table Data</td>
+            <td>Table Data</td>
+        </tr>
+        <tr>
+            <td>Table Data</td>
+            <td>Table Data</td>
+            <td>Table Data</td>
+        </tr>
+        <tr>
+            <td>Table Data</td>
+            <td>Table Data</td>
+            <td>Table Data</td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="uk-table uk-table-hover uk-table-divider">
+    <thead>
+        <tr>
+            <th>Table Heading</th>
+            <th>Table Heading</th>
+            <th>Table Heading</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Table Data</td>
+            <td>Table Data</td>
+            <td>Table Data</td>
+        </tr>
+        <tr>
+            <td>Table Data</td>
+            <td>Table Data</td>
+            <td>Table Data</td>
+        </tr>
+        <tr>
+            <td>Table Data</td>
+            <td>Table Data</td>
+            <td>Table Data</td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="uk-table uk-table-small uk-table-divider">
+    <thead>
+        <tr>
+            <th>Table Heading</th>
+            <th>Table Heading</th>
+            <th>Table Heading</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Table Data</td>
+            <td>Table Data</td>
+            <td>Table Data</td>
+        </tr>
+        <tr>
+            <td>Table Data</td>
+            <td>Table Data</td>
+            <td>Table Data</td>
+        </tr>
+        <tr>
+            <td>Table Data</td>
+            <td>Table Data</td>
+            <td>Table Data</td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="uk-table uk-table-justify uk-table-divider">
+    <thead>
+        <tr>
+            <th class="uk-width-small">Table Heading</th>
+            <th>Table Heading</th>
+            <th>Table Heading</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Table Data</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+            <td><button class="uk-button uk-button-default" type="button">Button</button></td>
+        </tr>
+        <tr>
+            <td>Table Data</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+            <td><button class="uk-button uk-button-default" type="button">Button</button></td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="uk-table uk-table-middle uk-table-divider">
+    <thead>
+        <tr>
+            <th class="uk-width-small">Table Heading</th>
+            <th>Table Heading</th>
+            <th>Table Heading</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Table Data</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+            <td><button class="uk-button uk-button-default" type="button">Button</button></td>
+        </tr>
+        <tr>
+            <td>Table Data</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+            <td><button class="uk-button uk-button-default" type="button">Button</button></td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="uk-overflow-auto">
+    <table class="uk-table uk-table-small uk-table-divider">
+        <thead>
+            <tr>
+                <th>Table Heading</th>
+                <th>Table Heading</th>
+                <th>Table Heading</th>
+                <th>Table Heading</th>
+                <th>Table Heading</th>
+                <th>Table Heading</th>
+                <th>Table Heading</th>
+                <th>Table Heading</th>
+                <th>Table Heading</th>
+                <th>Table Heading</th>
+                <th>Table Heading</th>
+                <th>Table Heading</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+            </tr>
+            <tr>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+            </tr>
+            <tr>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<table class="uk-table uk-table-responsive uk-table-divider">
+    <thead>
+        <tr>
+            <th>Table Heading</th>
+            <th>Table Heading</th>
+            <th>Table Heading</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Table Data</td>
+            <td>Table Data</td>
+            <td>Table Data</td>
+        </tr>
+        <tr>
+            <td>Table Data</td>
+            <td>Table Data</td>
+            <td>Table Data</td>
+        </tr>
+        <tr>
+            <td>Table Data</td>
+            <td>Table Data</td>
+            <td>Table Data</td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="uk-table uk-table-divider">
+    <thead>
+        <tr>
+            <th class="uk-table-shrink">Shrink</th>
+            <th class="uk-table-expand">Expand</th>
+            <th class="uk-width-small">Width Small</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Table Data</td>
+            <td>Table Data</td>
+            <td>Table Data</td>
+        </tr>
+        <tr>
+            <td>Table Data</td>
+            <td>Table Data</td>
+            <td>Table Data</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="uk-overflow-auto">
+    <table class="uk-table uk-table-hover uk-table-middle uk-table-divider">
+        <thead>
+            <tr>
+                <th class="uk-table-shrink"></th>
+                <th class="uk-table-shrink">Preserve</th>
+                <th class="uk-table-expand">Expand + Link</th>
+                <th class="uk-width-small">Truncate</th>
+                <th class="uk-table-shrink uk-text-nowrap">Shrink + Nowrap</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input class="uk-checkbox" type="checkbox"></td>
+                <td><img class="uk-preserve-width uk-border-circle" src="images/avatar.jpg" width="40" alt=""></td>
+                <td class="uk-table-link">
+                    <a class="uk-link-reset" href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</a>
+                </td>
+                <td class="uk-text-truncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</td>
+                <td class="uk-text-nowrap">Lorem ipsum dolor</td>
+            </tr>
+            <tr>
+                <td><input class="uk-checkbox" type="checkbox"></td>
+                <td><img class="uk-preserve-width uk-border-circle" src="images/avatar.jpg" width="40" alt=""></td>
+                <td class="uk-table-link">
+                    <a class="uk-link-reset" href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</a>
+                </td>
+                <td class="uk-text-truncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</td>
+                <td class="uk-text-nowrap">Lorem ipsum dolor</td>
+            </tr>
+            <tr>
+                <td><input class="uk-checkbox" type="checkbox"></td>
+                <td><img class="uk-preserve-width uk-border-circle" src="images/avatar.jpg" width="40" alt=""></td>
+                <td class="uk-table-link">
+                    <a class="uk-link-reset" href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</a>
+                </td>
+                <td class="uk-text-truncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</td>
+                <td class="uk-text-nowrap">Lorem ipsum dolor</td>
+            </tr>
+            <tr>
+                <td><input class="uk-checkbox" type="checkbox"></td>
+                <td><img class="uk-preserve-width uk-border-circle" src="images/avatar.jpg" width="40" alt=""></td>
+                <td class="uk-table-link">
+                    <a class="uk-link-reset" href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</a>
+                </td>
+                <td class="uk-text-truncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</td>
+                <td class="uk-text-nowrap">Lorem ipsum dolor</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!------text--->
+<div class="uk-child-width-1-3@s uk-grid-small" uk-grid>
+    <div>
+        <div class="uk-card uk-card-default uk-card-small">
+            <div class="uk-text-left uk-card-body">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr. <code>.uk-text-left</code>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-default uk-card-small">
+            <div class="uk-text-right uk-card-body">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr. <code>.uk-text-right</code>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-default uk-card-small">
+            <div class="uk-text-center uk-card-body">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr. <code>.uk-text-center</code>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="uk-child-width-1-3@s uk-grid-small" uk-grid>
+    <div>
+        <div class="uk-card uk-card-default uk-card-small">
+            <div class="uk-text-center@s uk-card-body">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr. <code>.uk-text-center@s</code>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-default uk-card-small">
+            <div class="uk-text-right@l uk-card-body">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr. <code>.uk-text-right@l</code>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-default uk-card-small">
+            <div class="uk-text-center@m uk-card-body">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr. <code>.uk-text-center@m</code>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="uk-child-width-1-3@m uk-child-width-1-2@s" uk-grid>
+    <div>
+        <img src="https://getuikit.com/docs/images/avatar.jpg" width="50" height="50">
+        <span class="uk-text-top">Lorem ipsum.</span>
+    </div>
+    <div>
+        <img src="https://getuikit.com/docs/images/avatar.jpg" width="50" height="50">
+        <span class="uk-text-middle">Lorem ipsum.</span>
+    </div>
+    <div>
+        <img src="https://getuikit.com/docs/images/avatar.jpg" width="50" height="50">
+        <span class="uk-text-bottom">Lorem ipsum.</span>
+    </div>
+</div>
+
+<div class="uk-child-width-1-2@s" uk-grid>
+    <div>
+        <div class="uk-panel uk-text-truncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+    </div>
+    <div>
+        <div class="uk-panel uk-text-break">Loremipsumdolorsitamet,consecteturadipiscingelit,seddoeiusmodtemporincididuntutlaboreetdoloremagnaaliqua.</div>
+    </div>
+</div>
+
+<!------thumbnav---->
+<ul class="uk-thumbnav" uk-margin>
+    <li class="uk-active"><a href="#"><img src="https://getuikit.com/docs/images/photo.jpg" width="100" alt=""></a></li>
+    <li><a href="#"><img src="https://getuikit.com/docs/images/dark.jpg" width="100" alt=""></a></li>
+    <li><a href="#"><img src="https://getuikit.com/docs/images/light.jpg" width="100" alt=""></a></li>
+</ul>
+
+<ul class="uk-thumbnav uk-thumbnav-vertical" uk-margin>
+    <li class="uk-active"><a href="#"><img src="https://getuikit.com/docs/images/photo.jpg" width="100" alt=""></a></li>
+    <li><a href="#"><img src="https://getuikit.com/docs/images/dark.jpg" width="100" alt=""></a></li>
+    <li><a href="#"><img src="https://getuikit.com/docs/images/light.jpg" width="100" alt=""></a></li>
+</ul>
+
+<div class="uk-position-relative" uk-slideshow="animation: fade">
+
+    <ul class="uk-slideshow-items">
+        <li>
+            <img src="https://getuikit.com/docs/images/photo.jpg" alt="" uk-cover>
+        </li>
+        <li>
+            <img src="https://getuikit.com/docs/images/dark.jpg" alt="" uk-cover>
+        </li>
+        <li>
+            <img src="https://getuikit.com/docs/images/light.jpg" alt="" uk-cover>
+        </li>
+    </ul>
+
+    <div class="uk-position-bottom-center uk-position-small">
+        <ul class="uk-thumbnav">
+            <li uk-slideshow-item="0"><a href="#"><img src="https://getuikit.com/docs/images/photo.jpg" width="100" alt=""></a></li>
+            <li uk-slideshow-item="1"><a href="#"><img src="https://getuikit.com/docs/images/dark.jpg" width="100" alt=""></a></li>
+            <li uk-slideshow-item="2"><a href="#"><img src="https://getuikit.com/docs/images/light.jpg" width="100" alt=""></a></li>
+        </ul>
+    </div>
+
+</div>
+<!---tile----->
+<div class="uk-child-width-1-2@s uk-grid-collapse uk-text-center" uk-grid>
+    <div>
+        <div class="uk-tile uk-tile-default">
+            <p class="uk-h4">Default</p>
+        </div>
+    </div>
+    <div>
+        <div class="uk-tile uk-tile-muted">
+            <p class="uk-h4">Muted</p>
+        </div>
+    </div>
+    <div>
+        <div class="uk-tile uk-tile-primary">
+            <p class="uk-h4">Primary</p>
+        </div>
+    </div>
+    <div>
+        <div class="uk-tile uk-tile-secondary">
+            <p class="uk-h4">Secondary</p>
+        </div>
+    </div>
+</div>
+
+<div class="uk-child-width-1-3@s uk-grid-small uk-text-center" uk-grid>
+    <div>
+        <div class="uk-tile uk-tile-muted uk-padding-remove">
+            <p class="uk-h4">Remove</p>
+        </div>
+    </div>
+    <div>
+        <div class="uk-tile uk-tile-primary uk-padding-small">
+            <p class="uk-h4">Small</p>
+        </div>
+    </div>
+    <div>
+        <div class="uk-tile uk-tile-secondary uk-padding-large">
+            <p class="uk-h4">Large</p>
+        </div>
+    </div>
+</div>
+
+<!-----toggle----->
+<div>
+    <button class="uk-button uk-button-default" type="button" uk-toggle="target: #toggle-usage">Toggle</button>
+    <p id="toggle-usage">What's up?</p>
+</div>
+
+<button class="uk-button uk-button-default" type="button" uk-toggle="target: .toggle">Toggle</button>
+<p class="toggle">Hello!</p>
+<p class="toggle" hidden>Bazinga!</p>
+
+<button class="uk-button uk-button-default" type="button" uk-toggle="target: #toggle-custom; cls: uk-card-primary">Toggle</button>
+<div id="toggle-custom" class="uk-card uk-card-default uk-card-body uk-margin-small">Custom class</div>
+
+<button href="#toggle-animation" class="uk-button uk-button-default" type="button" uk-toggle="target: #toggle-animation; animation: uk-animation-fade">Toggle</button>
+<div id="toggle-animation" class="uk-card uk-card-default uk-card-body uk-margin-small">Animation</div>
+
+<button class="uk-button uk-button-default" type="button" uk-toggle="target: #toggle-animation-multiple; animation:  uk-animation-slide-left, uk-animation-slide-bottom">Toggle</button>
+<div id="toggle-animation-multiple" class="uk-card uk-card-default uk-card-body uk-margin-small">Animation</div>
+
+<button class="uk-button uk-button-default" type="button" uk-toggle="target: .toggle-animation-queued; animation: uk-animation-fade; queued: true; duration: 300">Toggle</button>
+<p class="toggle-animation-queued uk-card uk-card-default uk-card-body uk-margin-small">Animation</p>
+<p class="toggle-animation-queued uk-card uk-card-primary uk-card-body uk-margin-small" hidden>Animation</p>
+
+<button class="uk-button uk-button-default" type="button" uk-toggle="target: #toggle-hover; mode: hover">hover</button>
+<p id="toggle-hover">What's up?</p>
+
+<div class="uk-card uk-card-default uk-card-body uk-width-medium" uk-toggle="cls: uk-card-primary; mode: media; media: @l">
+    Primary on large screens
+</div>
+
+<!----------tooltips----->
+<button class="uk-button uk-button-default" uk-tooltip="Hello World">Hover</button>
+
+<p uk-margin>
+    <button class="uk-button uk-button-default" uk-tooltip="Hello World">Top</button>
+    <button class="uk-button uk-button-default" uk-tooltip="title: Hello World; pos: top-left">Top Left</button>
+    <button class="uk-button uk-button-default" uk-tooltip="title: Hello World; pos: top-right">Top Right</button>
+    <button class="uk-button uk-button-default" uk-tooltip="title: Hello World; pos: bottom">Bottom</button>
+    <button class="uk-button uk-button-default" uk-tooltip="title: Hello World; pos: bottom-left">Bottom Left</button>
+    <button class="uk-button uk-button-default" uk-tooltip="title: Hello World; pos: bottom-right">Bottom Right</button>
+    <button class="uk-button uk-button-default" uk-tooltip="title: Hello World; pos: left">Left</button>
+    <button class="uk-button uk-button-default" uk-tooltip="title: Hello World; pos: right">Right</button>
+</p>
+
+<button class="uk-button uk-button-default" uk-tooltip="title: Hello World; delay: 500">Hover</button>
+
+<!-----totop----->
+<a href="#" uk-totop uk-scroll></a>
+
+<!------transition----->
+<div class="uk-child-width-1-2 uk-child-width-1-3@s uk-grid-match uk-grid-small" uk-grid>
+    <div class="uk-text-center">
+        <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+            <img src="https://getuikit.com/docs/images/dark.jpg" alt="">
+            <div class="uk-transition-fade uk-position-cover uk-position-small uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle">
+                <p class="uk-h4 uk-margin-remove">Fade</p>
+            </div>
+        </div>
+        <p class="uk-margin-small-top">Fade</p>
+    </div>
+    <div class="uk-text-center">
+        <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+            <img src="https://getuikit.com/docs/images/dark.jpg" alt="">
+            <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-default">
+                <p class="uk-h4 uk-margin-remove">Bottom</p>
+            </div>
+        </div>
+        <p class="uk-margin-small-top">Bottom</p>
+    </div>
+    <div class="uk-text-center">
+        <div class="uk-inline-clip uk-transition-toggle uk-light" tabindex="0">
+            <img src="https://getuikit.com/docs/images/dark.jpg" alt="">
+            <div class="uk-position-center">
+                <span class="uk-transition-fade" uk-icon="icon: plus; ratio: 2"></span>
+            </div>
+        </div>
+        <p class="uk-margin-small-top">Icon</p>
+    </div>
+    <div class="uk-text-center">
+        <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+            <img src="https://getuikit.com/docs/images/dark.jpg" alt="">
+            <img class="uk-transition-scale-up uk-position-cover" src="images/light.jpg" alt="">
+        </div>
+        <p class="uk-margin-small-top">2 Images</p>
+    </div>
+    <div class="uk-text-center">
+        <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+            <img class="uk-transition-scale-up uk-transition-opaque" src="images/dark.jpg" alt="">
+        </div>
+        <p class="uk-margin-small-top">Scale Up Image</p>
+    </div>
+    <div class="uk-text-center">
+        <div class="uk-inline-clip uk-transition-toggle uk-light" tabindex="0">
+            <img src="https://getuikit.com/docs/images/dark.jpg" alt="">
+            <div class="uk-position-center">
+                <div class="uk-transition-slide-top-small"><h4 class="uk-margin-remove">Headline</h4></div>
+                <div class="uk-transition-slide-bottom-small"><h4 class="uk-margin-remove">Subheadline</h4></div>
+            </div>
+        </div>
+        <p class="uk-margin-small-top">Small Top + Bottom</p>
+    </div>
+</div>
+<!------upload----->
+<div class="js-upload" uk-form-custom>
+    <input type="file" multiple>
+    <button class="uk-button uk-button-default" type="button" tabindex="-1">Select</button>
+</div>
+
+<div class="js-upload uk-placeholder uk-text-center">
+    <span uk-icon="icon: cloud-upload"></span>
+    <span class="uk-text-middle">Attach binaries by dropping them here or</span>
+    <div uk-form-custom>
+        <input type="file" multiple>
+        <span class="uk-link">selecting one</span>
+    </div>
+</div>
+
+<progress id="js-progressbar" class="uk-progress" value="0" max="100" hidden></progress>
+
+<script>
+
+    var bar = document.getElementById('js-progressbar');
+
+    UIkit.upload('.js-upload', {
+
+        url: '',
+        multiple: true,
+
+        beforeSend: function () {
+            console.log('beforeSend', arguments);
+        },
+        beforeAll: function () {
+            console.log('beforeAll', arguments);
+        },
+        load: function () {
+            console.log('load', arguments);
+        },
+        error: function () {
+            console.log('error', arguments);
+        },
+        complete: function () {
+            console.log('complete', arguments);
+        },
+
+        loadStart: function (e) {
+            console.log('loadStart', arguments);
+
+            bar.removeAttribute('hidden');
+            bar.max = e.total;
+            bar.value = e.loaded;
+        },
+
+        progress: function (e) {
+            console.log('progress', arguments);
+
+            bar.max = e.total;
+            bar.value = e.loaded;
+        },
+
+        loadEnd: function (e) {
+            console.log('loadEnd', arguments);
+
+            bar.max = e.total;
+            bar.value = e.loaded;
+        },
+
+        completeAll: function () {
+            console.log('completeAll', arguments);
+
+            setTimeout(function () {
+                bar.setAttribute('hidden', 'hidden');
+            }, 1000);
+
+            alert('Upload Completed');
+        }
+
+    });
+
+</script>
+
+
+<!------utility---->
+<div class="uk-child-width-1-3@s" uk-grid>
+    <div>
+        <div class="uk-panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+    </div>
+    <div>
+        <div class="uk-panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+    </div>
+    <div>
+        <div class="uk-panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+    </div>
+</div>
+
+<div class="uk-panel uk-panel-scrollable">
+    <ul class="uk-list">
+        <li><label><input class="uk-checkbox" type="checkbox"> Category 1</label></li>
+        <li>
+            <label><input class="uk-checkbox" type="checkbox"> Category 2</label>
+            <ul>
+                <li><label><input class="uk-checkbox" type="checkbox"> Category 2.1</label></li>
+                <li><label><input class="uk-checkbox" type="checkbox"> Category 2.2</label></li>
+                <li>
+                    <label><input class="uk-checkbox" type="checkbox"> Category 2.3</label>
+                    <ul>
+                        <li><label><input class="uk-checkbox" type="checkbox"> Category 2.3.1</label></li>
+                        <li><label><input class="uk-checkbox" type="checkbox"> Category 2.3.2</label></li>
+                    </ul>
+                </li>
+                <li><label><input class="uk-checkbox" type="checkbox"> Category 2.4</label></li>
+            </ul>
+        </li>
+        <li><label><input class="uk-checkbox" type="checkbox"> Category 3</label></li>
+        <li><label><input class="uk-checkbox" type="checkbox"> Category 4</label></li>
+    </ul>
+
+</div>
+
+<div class="uk-clearfix">
+    <div class="uk-float-right">
+        <div class="uk-card uk-card-default uk-card-body">Right</div>
+    </div>
+    <div class="uk-float-left">
+        <div class="uk-card uk-card-default uk-card-body">Left</div>
+    </div>
+</div>
+
+<div class="uk-overflow-auto uk-height-small">
+    <table class="uk-table uk-table-striped uk-table-condensed uk-text-nowrap">
+        <thead>
+            <tr>
+                <th>Table Heading</th>
+                <th>Table Heading</th>
+                <th>Table Heading</th>
+                <th>Table Heading</th>
+                <th>Table Heading</th>
+                <th>Table Heading</th>
+                <th>Table Heading</th>
+                <th>Table Heading</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td>Table Footer</td>
+                <td>Table Footer</td>
+                <td>Table Footer</td>
+                <td>Table Footer</td>
+                <td>Table Footer</td>
+                <td>Table Footer</td>
+                <td>Table Footer</td>
+                <td>Table Footer</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+            </tr>
+            <tr>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="uk-height-medium">
+    <div class="js-wrapper">
+
+        <p>Some content before the overflow auto container.</p>
+
+        <div uk-overflow-auto="selContainer: .uk-height-medium; selContent: .js-wrapper">
+            <div class="uk-grid-small" uk-grid>
+                <div class="uk-width-1-2"><img src="images/light.jpg" alt=""></div>
+                <div class="uk-width-1-2"><img src="images/dark.jpg" alt=""></div>
+                <div class="uk-width-1-2"><img src="images/photo.jpg" alt=""></div>
+                <div class="uk-width-1-2"><img src="images/photo2.jpg" alt=""></div>
+            </div>
+        </div>
+
+        <p>Some content after the overflow auto container.</p>
+
+    </div>
+</div>
+
+<a class="uk-button uk-button-default" href="#modal-overflow" uk-toggle>Open</a>
+
+<div id="modal-overflow" uk-modal>
+    <div class="uk-modal-dialog">
+
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+
+        <div class="uk-modal-header">
+            <h2 class="uk-modal-title">Headline</h2>
+        </div>
+
+        <div class="uk-modal-body" uk-overflow-auto>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        </div>
+
+        <div class="uk-modal-footer uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+            <button class="uk-button uk-button-primary" type="button">Save</button>
+        </div>
+
+    </div>
+</div>
+
+<div class="uk-child-width-1-2@s" uk-grid>
+    <div>
+        <pre class="uk-resize-vertical">
+            <code>
+&lt;!-- Resize vertically --&gt;
+&lt;div uk-grid&gt;
+    &lt;div class="uk-width-1-2"&gt;...&lt;/div&gt;
+    &lt;div class="uk-width-1-2"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="uk-child-width-1-2" uk-grid&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+&lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <div>
+        <pre class="uk-resize">
+            <code>
+&lt;!-- Resize horizontally and vertically --&gt;
+&lt;div uk-grid&gt;
+    &lt;div class="uk-width-1-2"&gt;...&lt;/div&gt;
+    &lt;div class="uk-width-1-2"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="uk-child-width-1-2" uk-grid&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+&lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+</div>
+
+<div class="uk-inline">
+    <img src="images/photo.jpg" width="300" alt="">
+    <div class="uk-position-medium uk-position-cover uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle">Overlay</div>
+</div>
+
+<img class="uk-border-rounded" src="images/avatar.jpg" width="200" height="200" alt="Border rounded">
+<img class="uk-border-circle" src="images/avatar.jpg" width="200" height="200" alt="Border circle">
+<img class="uk-border-pill" src="images/avatar.jpg" width="200" height="200" alt="Border pill">
+
+<div class="uk-child-width-1-2@s uk-text-center" uk-grid>
+    <div>
+        <div class="uk-box-shadow-small uk-padding">Small</div>
+    </div>
+
+    <div>
+        <div class="uk-box-shadow-medium uk-padding">Medium</div>
+    </div>
+
+    <div>
+        <div class="uk-box-shadow-large uk-padding">Large</div>
+    </div>
+
+    <div>
+        <div class="uk-box-shadow-xlarge uk-padding">X-Large</div>
+    </div>
+</div>
+<div class="uk-box-shadow-bottom uk-box-shadow-small uk-width-1-2@s uk-text-center">
+    <div class="uk-background-default uk-padding-large">
+        Box shadow bottom
+    </div>
+</div>
+
+<div class="uk-child-width-1-2@s uk-text-center" uk-grid>
+    <div>
+        <div class="uk-box-shadow-hover-small uk-padding">Hover Small</div>
+    </div>
+
+    <div>
+        <div class="uk-box-shadow-hover-xlarge uk-padding">Hover X-Large</div>
+    </div>
+
+    <div>
+        <div class="uk-box-shadow-small uk-box-shadow-hover-large uk-padding">Small + Hover Large</div>
+    </div>
+
+    <div>
+        <div class="uk-box-shadow-xlarge uk-box-shadow-hover-medium uk-padding">X-Large + Hover Medium</div>
+    </div>
+</div>
+
+<p class="uk-dropcap">Dorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+<a class="uk-logo" href="#">Logo</a>
+
+<div class="uk-panel uk-padding uk-background-secondary uk-light">
+    <a class="uk-logo" href="#">Logo</a>
+</div>
+
+<div class="uk-child-width-expand@s" uk-grid>
+    <div>
+        <div class="uk-panel uk-padding uk-background-muted">
+            <a class="uk-logo" href="#">
+                <img src="images/logo-placeholder.svg" alt="">
+                <img class="uk-logo-inverse" src="https://getuikit.com/docs/images/logo-placeholder-light.svg" alt="">
+            </a>
+        </div>
+    </div>
+    <div>
+        <div class="uk-panel uk-padding uk-background-secondary uk-light">
+            <a class="uk-logo" href="#">
+                <img src="images/logo-placeholder.svg" alt="">
+                <img class="uk-logo-inverse" src="https://getuikit.com/docs/images/logo-placeholder-light.svg" alt="">
+            </a>
+        </div>
+    </div>
+</div>
+<div class="uk-child-width-1-2 uk-child-width-1-3@s uk-grid-small uk-light" uk-grid>
+    <div>
+        <div class="uk-inline uk-background-primary">
+            <img class="uk-blend-multiply" src="https://getuikit.com/docs/images/dark.jpg" alt="Blend Multiply">
+            <div class="uk-position-center">
+                <p class="uk-h4 uk-margin-remove">Multiply</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="uk-inline uk-background-primary">
+            <img class="uk-blend-screen" src="https://getuikit.com/docs/images/dark.jpg" alt="Blend Screen">
+            <div class="uk-position-center">
+                <p class="uk-h4 uk-margin-remove">Screen</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="uk-inline uk-background-primary">
+            <img class="uk-blend-overlay" src="https://getuikit.com/docs/images/dark.jpg" alt="Blend Overlay">
+            <div class="uk-position-center">
+                <p class="uk-h4 uk-margin-remove">Overlay</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="uk-inline uk-background-primary">
+            <img class="uk-blend-darken" src="https://getuikit.com/docs/images/dark.jpg" alt="Blend Darken">
+            <div class="uk-position-center">
+                <p class="uk-h4 uk-margin-remove">Darken</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="uk-inline uk-background-primary">
+            <img class="uk-blend-lighten" src="https://getuikit.com/docs/images/dark.jpg" alt="Blend Lighten">
+            <div class="uk-position-center">
+                <p class="uk-h4 uk-margin-remove">Lighten</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="uk-inline uk-background-primary">
+            <img class="uk-blend-color-dodge" src="https://getuikit.com/docs/images/dark.jpg" alt="Blend Color Dodge">
+            <div class="uk-position-center">
+                <p class="uk-h4 uk-margin-remove">Color Dodge</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="uk-inline uk-background-primary">
+            <img class="uk-blend-color-burn" src="https://getuikit.com/docs/images/dark.jpg" alt="Blend Color Burn">
+            <div class="uk-position-center">
+                <p class="uk-h4 uk-margin-remove">Color Burn</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="uk-inline uk-background-primary">
+            <img class="uk-blend-hard-light" src="https://getuikit.com/docs/images/dark.jpg" alt="Blend Hard Light">
+            <div class="uk-position-center">
+                <p class="uk-h4 uk-margin-remove">Hard Light</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="uk-inline uk-background-primary">
+            <img class="uk-blend-soft-light" src="https://getuikit.com/docs/images/dark.jpg" alt="Blend Soft Light">
+            <div class="uk-position-center">
+                <p class="uk-h4 uk-margin-remove">Soft Light</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="uk-inline uk-background-primary">
+            <img class="uk-blend-difference" src="https://getuikit.com/docs/images/dark.jpg" alt="Blend Difference">
+            <div class="uk-position-center">
+                <p class="uk-h4 uk-margin-remove">Difference</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="uk-inline uk-background-primary">
+            <img class="uk-blend-exclusion" src="https://getuikit.com/docs/images/dark.jpg" alt="Blend Exclusion">
+            <div class="uk-position-center">
+                <p class="uk-h4 uk-margin-remove">Exclusion</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="uk-inline uk-background-primary">
+            <img class="uk-blend-hue" src="https://getuikit.com/docs/images/dark.jpg" alt="Blend Hue">
+            <div class="uk-position-center">
+                <p class="uk-h4 uk-margin-remove">Hue</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="uk-inline uk-background-primary">
+            <img class="uk-blend-saturation" src="https://getuikit.com/docs/images/dark.jpg" alt="Blend Saturation">
+            <div class="uk-position-center">
+                <p class="uk-h4 uk-margin-remove">Saturation</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="uk-inline uk-background-primary">
+            <img class="uk-blend-color" src="https://getuikit.com/docs/images/dark.jpg" alt="Blend Color">
+            <div class="uk-position-center">
+                <p class="uk-h4 uk-margin-remove">Color</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="uk-inline uk-background-primary">
+            <img class="uk-blend-luminosity" src="https://getuikit.com/docs/images/dark.jpg" alt="Blend Luminosity">
+            <div class="uk-position-center">
+                <p class="uk-h4 uk-margin-remove">Luminosity</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="uk-inline">
+    <img src="images/light.jpg" alt="">
+    <a class="uk-position-absolute uk-transform-center" style="left: 50%; top: 50%" href="#" uk-marker></a>
+</div>
+<div class="uk-child-width-1-3@m" uk-grid>
+    <div class="uk-animation-toggle" tabindex="0">
+        <div class="uk-transform-origin-bottom-right uk-card uk-card-default uk-card-body uk-animation-scale-up">
+            <p class="uk-text-center">Bottom Right</p>
+        </div>
+    </div>
+    <div class="uk-animation-toggle" tabindex="0">
+        <div class="uk-transform-origin-top-center uk-card uk-card-default uk-card-body uk-animation-scale-up">
+            <p class="uk-text-center">Top Center</p>
+        </div>
+    </div>
+    <div class="uk-animation-toggle" tabindex="0">
+        <div class="uk-transform-origin-bottom-center uk-card uk-card-default uk-card-body uk-animation-scale-up">
+            <p class="uk-text-center">Bottom Center</p>
+        </div>
+    </div>
+</div>
+
+<a class="uk-disabled uk-button uk-button-default" href="#">Disabled</a>
+
+<div class="uk-drag uk-width-small uk-padding uk-background-muted uk-text-center">
+    <i uk-icon="icon: move; ratio: 2"></i>
+</div>
+<!------video------>
+<button class="uk-button uk-button-default uk-margin" type="button" uk-toggle="target: +">Toggle HTML5 Video</button>
+
+<video src="https://yootheme.com/site/images/media/yootheme-pro.mp4" controls playsinline hidden uk-video></video>
+
+<video src="https://yootheme.com/site/images/media/yootheme-pro.mp4" loop muted playsinline uk-video="autoplay: inview"></video>
+
+<button class="uk-button uk-button-default uk-margin-bottom" type="button" uk-toggle="target: +">Toggle YouTube Video</button>
+
+<iframe src="https://www.youtube-nocookie.com/embed/c2pz2mlSfXA?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1" width="1920" height="1080" frameborder="0" allowfullscreen uk-responsive uk-video="automute: true"></iframe>
+
+<!------visibility---->
+<div class="uk-grid-small uk-child-width-1-2 uk-child-width-1-4@s uk-text-center" uk-grid>
+    <div>
+        <div class="uk-panel">
+            <div class="uk-alert uk-margin-remove uk-alert-success">✔ Small</div>
+            <div class="uk-alert uk-position-cover uk-margin-remove uk-hidden@s">Small</div>
+        </div>
+    </div>
+    <div>
+        <div class="uk-panel">
+            <div class="uk-alert uk-margin-remove uk-alert-success">✔ Medium</div>
+            <div class="uk-alert uk-position-cover uk-margin-remove uk-hidden@m">Medium</div>
+        </div>
+    </div>
+    <div>
+        <div class="uk-panel">
+            <div class="uk-alert uk-margin-remove uk-alert-success">✔ Large</div>
+            <div class="uk-alert uk-position-cover uk-margin-remove uk-hidden@l">Large</div>
+        </div>
+    </div>
+    <div>
+        <div class="uk-panel">
+            <div class="uk-alert uk-margin-remove uk-alert-success">✔ X-Large</div>
+            <div class="uk-alert uk-position-cover uk-margin-remove uk-hidden@xl">X-Large</div>
+        </div>
+    </div>
+</div>
+
+<div class="uk-grid-small uk-child-width-1-2 uk-child-width-1-4@s uk-text-center" uk-grid>
+    <div>
+        <div class="uk-panel">
+            <div class="uk-alert uk-margin-remove">Small</div>
+            <div class="uk-alert uk-alert-success uk-position-cover uk-margin-remove uk-visible@s">✔ Small</div>
+        </div>
+    </div>
+    <div>
+        <div class="uk-panel">
+            <div class="uk-alert uk-margin-remove">Medium</div>
+            <div class="uk-alert uk-alert-success uk-position-cover uk-margin-remove uk-visible@m">✔ Medium</div>
+        </div>
+    </div>
+    <div>
+        <div class="uk-panel">
+            <div class="uk-alert uk-margin-remove">Large</div>
+            <div class="uk-alert uk-alert-success uk-position-cover uk-margin-remove uk-visible@l">✔ Large</div>
+        </div>
+    </div>
+    <div>
+        <div class="uk-panel">
+            <div class="uk-alert uk-margin-remove">X-Large</div>
+            <div class="uk-alert uk-alert-success uk-position-cover uk-margin-remove uk-visible@xl">✔ X-Large</div>
+        </div>
+    </div>
+</div>
+
+<div class="uk-child-width-1-2@s" uk-grid>
+    <div class="uk-visible-toggle" tabindex="-1">
+
+        <h4>Hidden when not hovered</h4>
+
+        <div uk-grid>
+            <div class="uk-width-expand">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+            <div class="uk-width-auto">
+                <ul class="uk-hidden-hover uk-iconnav">
+                    <li><a href="#" uk-icon="icon: pencil"></a></li>
+                    <li><a href="#" uk-icon="icon: copy"></a></li>
+                    <li><a href="#" uk-icon="icon: trash"></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div class="uk-visible-toggle" tabindex="-1">
+
+        <h4>Invisible when not hovered</h4>
+
+        <div uk-grid>
+            <div class="uk-width-expand">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+            <div class="uk-width-auto">
+                <ul class="uk-invisible-hover uk-iconnav">
+                    <li><a href="#" uk-icon="icon: pencil"></a></li>
+                    <li><a href="#" uk-icon="icon: copy"></a></li>
+                    <li><a href="#" uk-icon="icon: trash"></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="uk-grid-small uk-child-width-1-2 uk-child-width-auto@s uk-text-center" uk-grid>
+    <div>
+        <div class="uk-panel">
+            <div class="uk-alert uk-margin-remove uk-alert-success">✔ Hidden Touch</div>
+            <div class="uk-alert uk-position-cover uk-margin-remove uk-hidden-touch">Hidden Touch</div>
+        </div>
+    </div>
+    <div>
+        <div class="uk-panel">
+            <div class="uk-alert uk-margin-remove uk-alert-success">✔ Hidden No-Touch</div>
+            <div class="uk-alert uk-position-cover uk-margin-remove uk-hidden-notouch">Hidden No-Touch</div>
+        </div>
+    </div>
+</div>
+
+<!-------width---->
+<div class="uk-text-center" uk-grid>
+    <div class="uk-width-1-3">
+        <div class="uk-card uk-card-default uk-card-body">1-3</div>
+    </div>
+    <div class="uk-width-1-3">
+        <div class="uk-card uk-card-default uk-card-body">1-3</div>
+    </div>
+    <div class="uk-width-1-3">
+        <div class="uk-card uk-card-default uk-card-body">1-3</div>
+    </div>
+</div>
+
+<div class="uk-text-center" uk-grid>
+    <div class="uk-width-1-2">
+        <div class="uk-card uk-card-default uk-card-body">1-2</div>
+    </div>
+    <div class="uk-width-1-2">
+        <div class="uk-card uk-card-default uk-card-body">1-2</div>
+    </div>
+</div>
+
+<div class="uk-text-center" uk-grid>
+    <div class="uk-width-1-4">
+        <div class="uk-card uk-card-default uk-card-body">1-4</div>
+    </div>
+    <div class="uk-width-3-4">
+        <div class="uk-card uk-card-default uk-card-body">3-4</div>
+    </div>
+</div>
+
+<div class="uk-text-center" uk-grid>
+    <div class="uk-width-1-3">
+        <div class="uk-card uk-card-default uk-card-body">1-3</div>
+    </div>
+    <div class="uk-width-1-3">
+        <div class="uk-card uk-card-default uk-card-body">1-3</div>
+    </div>
+    <div class="uk-width-1-3">
+        <div class="uk-card uk-card-default uk-card-body">1-3</div>
+    </div>
+</div>
+
+<div class="uk-text-center" uk-grid>
+    <div class="uk-width-1-2">
+        <div class="uk-card uk-card-default uk-card-body">1-2</div>
+    </div>
+    <div class="uk-width-1-2">
+        <div class="uk-card uk-card-default uk-card-body">1-2</div>
+    </div>
+</div>
+
+<div class="uk-text-center" uk-grid>
+    <div class="uk-width-1-4">
+        <div class="uk-card uk-card-default uk-card-body">1-4</div>
+    </div>
+    <div class="uk-width-3-4">
+        <div class="uk-card uk-card-default uk-card-body">3-4</div>
+    </div>
+</div>
+
+<div class="uk-text-center" uk-grid>
+    <div class="uk-width-auto">
+        <div class="uk-card uk-card-default uk-card-body">Auto</div>
+    </div>
+    <div class="uk-width-expand">
+        <div class="uk-card uk-card-default uk-card-body">Expand</div>
+    </div>
+</div>
+
+<div class="uk-child-width-1-4 uk-grid-small uk-text-center" uk-grid>
+    <div>
+        <div class="uk-card uk-card-default uk-card-body">Item</div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-default uk-card-body">Item</div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-default uk-card-body">Item</div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-default uk-card-body">Item</div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-default uk-card-body">Item</div>
+    </div>
+</div>
+
+<div class="uk-child-width-expand uk-grid-small uk-text-center" uk-grid>
+    <div>
+        <div class="uk-card uk-card-default uk-card-body">Item</div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-default uk-card-body">Item</div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-default uk-card-body">Item</div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-default uk-card-body">Item</div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-default uk-card-body">Item</div>
+    </div>
+</div>
+
+<div class="uk-width-small uk-margin"><div class="uk-card uk-card-small uk-card-default uk-card-body">Small</div></div>
+<div class="uk-width-medium uk-margin"><div class="uk-card uk-card-small uk-card-default uk-card-body">Medium</div></div>
+<div class="uk-width-large uk-margin"><div class="uk-card uk-card-small uk-card-default uk-card-body">Large</div></div>
+<div class="uk-width-xlarge uk-margin"><div class="uk-card uk-card-small uk-card-default uk-card-body">X-Large</div></div>
+<div class="uk-width-2xlarge uk-margin"><div class="uk-card uk-card-small uk-card-default uk-card-body">2X-Large</div></div>
+
+<div class="uk-width-small uk-margin"><div class="uk-card uk-card-small uk-card-default uk-card-body">Small</div></div>
+<div class="uk-width-medium uk-margin"><div class="uk-card uk-card-small uk-card-default uk-card-body">Medium</div></div>
+<div class="uk-width-large uk-margin"><div class="uk-card uk-card-small uk-card-default uk-card-body">Large</div></div>
+<div class="uk-width-xlarge uk-margin"><div class="uk-card uk-card-small uk-card-default uk-card-body">X-Large</div></div>
+<div class="uk-width-2xlarge uk-margin"><div class="uk-card uk-card-small uk-card-default uk-card-body">2X-Large</div></div>
+
+<div class="uk-child-width-expand uk-grid-small uk-text-center" uk-grid>
+    <div>
+        <div class="uk-card uk-card-default uk-card-body">Expand</div>
+    </div>
+    <div class="uk-width-1-3">
+        <div class="uk-card uk-card-default uk-card-body">1-3</div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-default uk-card-body">Expand</div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-default uk-card-body">Expand</div>
+    </div>
+</div>
+
+<div class="uk-grid-match uk-grid-small uk-text-center" uk-grid>
+    <div class="uk-width-1-2@m">
+        <div class="uk-card uk-card-default uk-card-body">1-2@m</div>
+    </div>
+    <div class="uk-width-1-4@m">
+        <div class="uk-card uk-card-default uk-card-body">1-4@m</div>
+    </div>
+    <div class="uk-width-1-4@m">
+        <div class="uk-card uk-card-default uk-card-body">1-4@m</div>
+    </div>
+    <div class="uk-width-1-5@m uk-hidden@l">
+        <div class="uk-card uk-card-secondary uk-card-body">1-5@m<br>hidden@l</div>
+    </div>
+    <div class="uk-width-1-5@m uk-width-1-3@l">
+        <div class="uk-card uk-card-default uk-card-body">1-5@m<br>1-3@l</div>
+    </div>
+    <div class="uk-width-3-5@m uk-width-2-3@l">
+        <div class="uk-card uk-card-default uk-card-body">3-5@m<br>2-3@l</div>
+    </div>
+</div>
+
+<div class="uk-grid-match uk-grid-small uk-text-center" uk-grid>
+    <div class="uk-width-auto@m uk-visible@l">
+        <div class="uk-card uk-card-primary uk-card-body">auto@m<br>visible@l</div>
+    </div>
+    <div class="uk-width-1-3@m">
+        <div class="uk-card uk-card-default uk-card-body">1-3@m</div>
+    </div>
+    <div class="uk-width-expand@m">
+        <div class="uk-card uk-card-default uk-card-body">expand@m</div>
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>
